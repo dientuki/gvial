@@ -1,0 +1,11 @@
+.sass-cache/
+.idea/
+.project
+.buildpath
+tmp/
+output/
+crash.log
+nanoc.yaml
+build.xml
+.DS_store
+Gemfile.lock
