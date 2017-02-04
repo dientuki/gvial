@@ -1,0 +1,25 @@
+%meta{:charset=>"utf-8"}
+%meta{'http-equiv'=>"X-UA-Compatible", :content=>"IE=edge,chrome=1"}
+
+%title
+  = @item[:title]
+
+%meta{:name=>"description", :content=>@item[:description]}
+- if (@item[:keywords] != nil)
+  %meta{:name=>"keywords", :content=>@item[:keywords]}
+
+%link{:rel=>'canonical', :href=>@item[:url]}
+
+/ Mobile viewport optimization http://goo.gl/b9SaQ
+%meta{:content => "True", :name => "HandheldFriendly"}
+%meta{:content => "320", :name => "MobileOptimized"}
+%meta{:content => "width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no", :name => "viewport"}
+%meta{:content => "on", "http-equiv" => "cleartype"}
+
+- if @config[:environment] == 'prod'
+
+  %link{:href => relative_path_to("/css/gvial-#{@config[:hexa]}-min.css"), :rel => "stylesheet", :type=>"text/css"}
+
+- else
+
+  %link{:href => relative_path_to("/css/gvial.css"), :rel => "stylesheet", :type=>"text/css"}

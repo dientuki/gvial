@@ -1,0 +1,12 @@
+!!! 5
+%html{:lang => "es"}
+  %head
+    = render '/main-parts/head.haml'
+  %body
+    = render '/main-parts/header.haml'
+
+    %main#main
+      = yield
+
+    = render '/main-parts/footer.haml'
+    = render '/main-parts/scripts.haml'

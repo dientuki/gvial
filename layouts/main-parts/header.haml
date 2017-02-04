@@ -1,0 +1,24 @@
+:ruby
+  menus = get_menu
+
+%header#header
+  %h1.visuallyhidden G-vial
+  .main-wrapper
+    %a.logo{:href=>relative_path_to('/'), :title=>"Home"} Home
+
+    .contact-info
+      .contact-info-title
+        Información
+      .contact-info-phone
+        (1) 7552783/82
+      .contact-info-schedule
+        Horario: Lunes a Viernes 7:30 a.m. - 5:00 p.m
+      .contact-info-schedule
+        Sábados 8:00 a.m. - 1:00 p.m.
+
+    %nav#primary-navigation
+      %h6.visuallyhidden Navegación
+      %ul.clearfix.menu-container
+        - menus.each do |menu|
+          %li.menu-item
+            %a.menu-link{:class=>('selected' if (@item[:selected] == menu[:href])  ), :href=>relative_path_to("/#{menu[:href]}.html"), :title=>menu[:title]}= menu[:title]

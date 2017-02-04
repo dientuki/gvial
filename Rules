@@ -1,0 +1,47 @@
+#!/usr/bin/env ruby
+
+# This is an example rule that matches Markdown (.md) files, and filters them
+# using the :kramdown filter. It is commented out by default, because kramdown
+# is not bundled with Nanoc or Ruby.
+#
+#compile '/**/*.md' do
+#  filter :kramdown
+#  layout '/default.*'
+#end
+
+compile '/images/**/*' do
+end
+
+compile '/css/**/*' do
+  case item[:extension]
+    when 'scss'
+      filter :erb
+      filter :sass, :syntax => :scss, :style => :expanded
+    when 'css'
+      filter :erb
+  end
+end
+
+compile '/js/**/*' do
+end
+
+compile '/fonts/**/*' do
+end
+
+compile '/**/*.{haml}' do
+  filter :haml, :ugly => true, :attr_wrapper => '"', :format => :html5
+  layout '/layout.haml'
+end
+
+route '/**/*' do
+  case item[:extension]
+    when 'scss'
+      item.identifier.to_s.sub('.scss', '.css')
+    when 'haml'
+      item.identifier.to_s.sub('.haml', '.html')
+    else
+      item.identifier.to_s
+  end
+end
+
+layout '/**/*', :haml, {:ugly => true, :attr_wrapper => '"'}

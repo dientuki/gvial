@@ -1,0 +1,11 @@
+- if (@config[:environment] == 'prod')
+  :javascript
+    var js = document.createElement('script'), s = document.getElementsByTagName('script')[0],
+        className = document.getElementsByTagName("HTML")[0].className;
+    js.type = 'text/javascript'; js.async = true;
+    js.src = 'js/gvial-#{@config[:hexa]}-min.js';
+    s.parentNode.insertBefore(js, s);
+
+- if @config[:environment] == 'dev'
+  %script{:src=>relative_path_to("/js/gvial.js"), :type=>"text/javascript"}
+
