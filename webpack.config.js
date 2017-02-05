@@ -13,6 +13,6 @@ module.exports = {
     ]
   },
   output: {
-    filename: './output/js/index.js',
+    filename: './output/js/gvial.js',
   }
 };

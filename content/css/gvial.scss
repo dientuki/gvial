@@ -31,9 +31,33 @@ body {
   font-family: 'Roboto Light';
 }
 
+#primary-navigation {
+  height: (52em/$fs);
+  padding: (4em/$fs) 0;
+  background: #f1f1f1;
+}
+
+#main {
+  overflow: hidden;
+}
+
 .block {
   .block-title {
     font-family: 'Roboto Bold';
+  }
+}
+
+.solidity {
+  position: relative;
+  height: (470em/$fs);
+
+  .solidity-img {
+    position: absolute;
+    left: 50%;
+    top: 0;
+    margin: 0 auto;
+    height: 100%;
+    transform: translateX(-50%);
   }
 }
 

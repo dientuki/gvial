@@ -1,5 +1,13 @@
-﻿%section.block.solidity
-  
+﻿:ruby
+  img = Array.new
+  img << relative_path_to("/images/content/solidez-320.jpg") + " 320w"
+  img << relative_path_to("/images/content/solidez-780.jpg") + " 780w"
+  img << relative_path_to("/images/content/solidez-1170.jpg") + " 1170w"
+  img << relative_path_to("/images/content/solidez-2000.jpg") + " 2000w"
+
+
+%section.block.solidity
+  %img.lzl.solidity-img{:srcset=>img.join(",")}
   .main-wrapper
     .solidity-content
       %h1.solidity-title Solidez
