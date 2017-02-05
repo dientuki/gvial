@@ -3,8 +3,38 @@
 @import "gridlex";
 @import "helpers";
 
-body {
+@font-face {
+  font-family: 'Roboto Bold';
+  src: url('../fonts/roboto-bold.eot');
+  src: url('../fonts/roboto-bold.eot?#iefix') format('embedded-opentype'),
+  url('../fonts/roboto-bold.woff') format('woff'),
+  url('../fonts/roboto-bold.ttf') format('truetype'),
+  url('../fonts/roboto-bold.svg#robotobold') format('svg');
+  font-weight: normal;
+  font-style: normal;
 
+}
+
+@font-face {
+  font-family: 'Roboto Light';
+  src: url('../fonts/roboto-light.eot');
+  src: url('../fonts/roboto-light.eot?#iefix') format('embedded-opentype'),
+  url('../fonts/roboto-light.woff') format('woff'),
+  url('../fonts/roboto-light.ttf') format('truetype'),
+  url('../fonts/roboto-light.svg#robotolight') format('svg');
+  font-weight: normal;
+  font-style: normal;
+
+}
+
+body {
+  font-family: 'Roboto Light';
+}
+
+.block {
+  .block-title {
+    font-family: 'Roboto Bold';
+  }
 }
 
 .main-wrapper {

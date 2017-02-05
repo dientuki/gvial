@@ -9,6 +9,8 @@
 #  layout '/default.*'
 #end
 
+ignore '/js/**/*'
+
 compile '/images/**/*' do
 end
 
@@ -22,8 +24,8 @@ compile '/css/**/*' do
   end
 end
 
-compile '/js/**/*' do
-end
+#compile '/js/**/*' do
+#end
 
 compile '/fonts/**/*' do
 end

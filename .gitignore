@@ -9,3 +9,4 @@ nanoc.yaml
 build.xml
 .DS_store
 Gemfile.lock
+node_modules/
