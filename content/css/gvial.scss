@@ -29,6 +29,7 @@
 
 body {
   font-family: 'Roboto Light';
+  color:#464646;
 }
 
 #primary-navigation {
@@ -44,6 +45,7 @@ body {
 .block {
   .block-title {
     font-family: 'Roboto Bold';
+    color:#464646;
   }
 }
 
@@ -59,6 +61,12 @@ body {
     height: 100%;
     transform: translateX(-50%);
   }
+}
+
+.menu-container {
+  position: relative;
+  background: none !important;
+
 }
 
 .main-wrapper {
