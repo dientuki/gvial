@@ -1,18 +1,43 @@
-﻿%section.block.products-services.main-wrapper
+﻿:ruby
+  img1 = Array.new
+  img1 << relative_path_to("/images/content/senal-vertical-2000.jpg") + " 2000w"
+
+  img2 = Array.new
+  img2 << relative_path_to("/images/content/senal-horizontal-2000.jpg") + " 2000w"
+
+  img3 = Array.new
+  img3 << relative_path_to("/images/content/defensa-2000.jpg") + " 2000w"
+
+  img4 = Array.new
+  img4 << relative_path_to("/images/content/plastic-devices-2000.jpg") + " 2000w"
+
+
+%section.block.products-services.main-wrapper
   %h1.visuallyhidden Productos y servicios
   .grid-noBottom
     .col-4
-      .products-services.block
-        %img
-
+      %figure.products-services.block
+        %img.lzl.products-services-img{:srcset=>img1.join(",")}
+        %figcaption
+          %strong Señalizacion
+          vertical
     .col-8
       .grid
         .col-12
-          .products-services.block
-            %img
+          %figure.products-services.block
+            %img.lzl.products-services-img{:srcset=>img2.join(",")}
+            %figcaption
+              %strong Señalizacion
+              horizontal
         .col-6-noBottom
-          .products-services.block
-            %img
+          %figure.products-services.block
+            %img.lzl.products-services-img{:srcset=>img3.join(",")}
+            %figcaption
+              %strong Defensa
+              metalica
         .col-6-noBottom
-          .products-services.block
-            %img
+          %figure.products-services.block
+            %img.lzl.products-services-img{:srcset=>img4.join(",")}
+            %figcaption
+              %strong Defensa
+              metalica

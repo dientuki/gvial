@@ -1,0 +1,44 @@
+@import "../vars";
+
+.solidity {
+  position: relative;
+  height: (470em/$fs);
+
+  .solidity-img {
+    position: absolute;
+    left: 50%;
+    top: 0;
+    margin: 0 auto;
+    height: 100%;
+    transform: translateX(-50%);
+  }
+
+  .solidity-content {
+    z-index: 1;
+    position: absolute;
+    bottom:1em;
+    left: 0;
+    width: (400em/$fs);
+    height: (176em/$fs);
+    background: white;
+    padding: (15em/$fs) (20em/$fs);
+    box-sizing: border-box;
+  }
+
+  .solidity-title {
+    $tfs:40;
+    font-size: #{$tfs/$fs}em;
+    text-transform: uppercase;
+    font-family: "Roboto Bold";
+    font-weight: bold;
+    color:#004E87;
+    margin-bottom: (22em/$tfs);
+    line-height: 1em;
+  }
+
+  .solidity-p {
+    $tfs:18;
+    font-size: #{$tfs/$fs}em;
+    padding-right: (80em/$tfs);
+  }
+}

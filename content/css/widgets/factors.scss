@@ -1,0 +1,27 @@
+@import "../vars";
+
+.factors {
+
+  .factors-list {}
+
+  .factors-list-item {
+    height: (50em/$fs);
+    line-height: (50em/$fs);
+    background: #005796;
+    margin-top: (15em/$fs);
+
+    &:first-of-type {
+      margin-top: 0;
+    }
+  }
+
+  .factors-list-link {
+    $tfs:40;
+    font-size: #{$tfs/$fs}em;
+    color:white;
+    display: block;
+    padding-left: (15em/$tfs);
+    text-transform: uppercase;
+    font-family: "Roboto Bold" ;
+  }
+}

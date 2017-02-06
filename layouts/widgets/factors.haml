@@ -1,8 +1,23 @@
-﻿%section.block.factors.main-wrapper
+﻿:ruby
+  ul = Array.new
+
+  ul << {:title => "Capacidad", :href=> '#'}
+  ul << {:title => "Solidex", :href=> '#'}
+  ul << {:title => "Garantía", :href=> '#'}
+  ul << {:title => "Disponibilidad", :href=> '#'}
+  ul << {:title => "Innovación", :href=> '#'}
+
+  img = Array.new
+  img << relative_path_to("/images/content/factors-2000.jpg") + " 2000w"
+
+%section.block.factors.main-wrapper
   %h1.block-title
     %strong Factores
   .grid-noBottom
     .col-4
-      %ul
-
+      %ul.factors-list
+        - ul.each do |li|
+          %li.factors-list-item
+            %a.factors-list-link{:href=>li[:href], :title=>li[:title]}= li[:title]
     .col-8
+      %img.lzl.solidity-img{:srcset=>img.join(",")}
