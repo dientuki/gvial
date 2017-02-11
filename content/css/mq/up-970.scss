@@ -4,11 +4,6 @@
 
 @media #{$gl-sm}{
 
-  #header {
-    display: none;
-    visibility: hidden;
-  }
-
   .block {
     [class*="col-"]{
       margin-top: (16em/$fs);
@@ -21,5 +16,11 @@
 
   .main-wrapper {
     width: (750em/$fs);
+  }
+
+  #header {
+    .logo {
+      left:0;
+    }
   }
 }

@@ -34,6 +34,26 @@
   .factors .factors-list-link {
     font-size: (30em/$fs);
   }
+
+  #header {
+    .logo {
+      left:0;
+      top:0;
+      background-size:contain;
+      width: 100%;
+      height: 100%;
+    }
+
+    > .main-wrapper {
+      margin: (10em/$fs);
+      width: auto;
+    }
+
+    .contact-info {
+      display: none;
+      visibility: hidden;
+    }
+  }
 }
 
 

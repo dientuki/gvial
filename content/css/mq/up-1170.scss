@@ -2,6 +2,12 @@
 @import "../gridlex-vars";
 
 @media #{$gl-md}{
+  #primary-navigation {
+    display: none;
+    visibility: hidden;
+  }
+
+
   .block {
     .block-title {
       $tfs:46;
