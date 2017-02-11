@@ -1,0 +1,97 @@
+@import "../vars";
+
+#header {
+  > .main-wrapper {
+    height: (180em/$fs);
+  }
+
+  .logo {
+    background: url(../images/logo-gvial.svg) no-repeat center center / cover;
+    width: (480em/$fs);
+    height: (145em/$fs);
+    position: absolute;
+    text-indent: -999em;
+    overflow: hidden;
+    left: (96em/$fs);
+    top: (25em/$fs);
+  }
+
+  .contact-info {
+    font-family: 'Roboto Bold';
+    position: absolute;
+    right: 0%;
+    bottom:(5em/$fs);
+    text-align: right;
+    color:black;
+
+    .contact-info-title {
+      font-size: (26em/$fs);
+      line-height: 1em;
+      text-transform: uppercase;
+    }
+
+
+    .contact-info-phone {
+      $tfs:36;
+      font-size: #{$tfs/$fs}em;
+      color:#004E87;
+      line-height: 1em;
+      margin-bottom: (7em/$tfs);
+    }
+
+    .contact-info-schedule {
+      text-align: center;
+      font-size: (12em/$fs);
+      line-height: 1em;
+    }
+
+  }
+}
+
+#primary-navigation {
+  .menu-container {
+    display: block;
+    height: (52em/$fs);
+  }
+
+  .menu-item {
+    border-left: solid (1em/$fs) #cacaca;
+    height: 100%;
+    float: left;
+    display: table;
+
+    &:first-child {
+      margin-left: (200em/$fs);
+      position: relative;
+
+      &:before {
+        content: '';
+        width: 57px;
+        height: 51px;
+        background: url(../images/logo-white.png);
+        position: absolute;
+        left: -65px;
+      }
+    }
+
+  }
+
+  .menu-link {
+    $tfs:18;
+    font-size: #{$tfs/$fs}em;
+    height: 100%;
+    display: block;
+    text-decoration: none;
+    font-family: 'Roboto Bold';
+    text-transform: uppercase;
+    color:#464646;
+    padding: 0 (10em/$tfs);
+    display: table-cell;
+    vertical-align: middle;
+
+    span {
+      display: block;
+      line-height: 1em;
+    }
+  }
+}

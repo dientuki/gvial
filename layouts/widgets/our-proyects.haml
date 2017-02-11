@@ -1,0 +1,14 @@
+﻿:ruby
+  img = Array.new
+  img << relative_path_to("/images/content/our-projects-320.jpg") + " 320w"
+  img << relative_path_to("/images/content/our-projects-780.jpg") + " 780w"
+  img << relative_path_to("/images/content/our-projects-1170.jpg") + " 1170w"
+  img << relative_path_to("/images/content/our-projects-2000.jpg") + " 2000w"
+
+%section.our-projects.block
+  %img.lzl.block-img-bg{:srcset=>img.join(",")}
+  .main-wrapper
+    %h1.block-title.our-projects-title
+      %strong
+        Nuestros
+      proyectos

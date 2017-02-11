@@ -1,0 +1,10 @@
+@import "../vars";
+@import "../gridlex-vars";
+
+@media #{$gl-xs}{
+  .main-wrapper {
+    width: 100%;
+  }
+}
+
+

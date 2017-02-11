@@ -1,0 +1,34 @@
+@import "../vars";
+
+.products-services {
+  figcaption {
+    min-height: 82px;
+    background: #005796;
+    color:white;
+    text-transform: uppercase;
+
+    strong {
+      display: block;
+    }
+  }
+
+  .p-s-horizontal {
+    figcaption {
+      strong {
+        display: inline;
+      }
+    }
+  }
+}
+
+.our-projects {
+  height: (466em/$fs);
+  
+  .our-projects-title {
+    color:white;
+
+    strong {
+      display: block;
+    }
+  }
+}

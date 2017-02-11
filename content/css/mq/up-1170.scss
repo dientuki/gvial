@@ -1,0 +1,8 @@
+@import "../vars";
+@import "../gridlex-vars";
+
+@media #{$gl-md}{
+  .main-wrapper {
+    width: (970em/$fs);
+  }
+}
