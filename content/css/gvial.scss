@@ -80,6 +80,15 @@ body {
   background: none !important;
 }
 
+.our-costumers-list {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  align-content: space-between;
+  height: calc(100% + 50px);
+}
+
 
 
 @import "widgets/header";

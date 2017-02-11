@@ -1,12 +1,16 @@
-﻿%section.block.our-costumers.main-wrapper
+﻿:ruby
+  customers = Array.new
+
+  customers << {:title => "Capacidad", :w=> '#', :h=> '#'}
+
+%section.block.our-costumers.main-wrapper
   %h1.block-title
     %strong
       Nuestros
     clientes
-  .grid-noBottom
-    .col-6
-      %p
-        Somos una empresa Colombiana,  especializada en Señalización y Seguridad Vial; contamos con un importante respaldo internacional y amplia trayectoria en el diseño, planeación,  ejecución y control de destacados proyectos tanto a nivel urbano como  rural a lo largo de todo el territorio nacional.  En G-Vial,  entendemos claramente la enorme responsabilidad que representa la Señalización como factor determinante e imprescindible en la Seguridad  vial y  la protección de los actores de una vía;  es por ello que invertimos de forma constante el profesionalismo, la rigurosidad técni
-    .col-6
-      %p
-        Somos una empresa Colombiana,  especializada en Señalización y Seguridad Vial; contamos con un importante respaldo internacional y amplia trayectoria en el diseño, planeación,  ejecución y control de destacados proyectos tanto a nivel urbano como  rural a lo largo de todo el territorio nacional.  G-Vial,  entendemos claramente la enorme responsabilidad que representa la Señalización como factor determinante e imprescindible en la Seguridad  vial y  la protección de los actores de una vía;  es por ello que invertimos de forma constante el profesionalismo, la rigurosidad téni
+  %ul.our-costumers-list
+    - (1..22).each do |i|
+      - w = rand(108..243)
+      - h = rand(94..187)
+      %li.our-costumers-item
+        %img{:src=>"http://lorempixel.com/#{w}/#{h}/", :width=>w, :height=>h, :title=>"title", :alt=>"alt"}
