@@ -23,4 +23,8 @@
       left:0;
     }
   }
+
+  #primary-navigation .menu-item:first-child {
+    margin-left: (70em/$fs);
+  }
 }
