@@ -9,6 +9,16 @@
     visibility: hidden;
   }
 
+  .block {
+    [class*="col-"]{
+      margin-top: (16em/$fs);
+
+      &:first-of-type {
+        margin-top: 0;
+      }
+    }
+  }
+
   .main-wrapper {
     width: (750em/$fs);
   }

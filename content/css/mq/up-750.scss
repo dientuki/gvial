@@ -6,19 +6,24 @@
     width: 100%;
   }
 
-  .our-company {
+  .block {
     padding: {
       left: (16em/$fs);
       right: (16em/$fs);
     }
+    width: auto;
 
-    [class*="col-6"]{
+    [class*="col-"]{
       margin-top: (16em/$fs);
 
       &:first-of-type {
         margin-top: 0;
       }
     }
+  }
+
+  .factors .factors-list-link {
+    font-size: (30em/$fs);
   }
 }
 

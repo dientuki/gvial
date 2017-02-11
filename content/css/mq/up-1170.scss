@@ -2,6 +2,15 @@
 @import "../gridlex-vars";
 
 @media #{$gl-md}{
+  .block {
+    .block-title {
+      $tfs:46;
+      font-size: #{$tfs/$fs}em;
+      margin-bottom: (25em/$tfs);
+    }
+  }
+
+
   .main-wrapper {
     width: (970em/$fs);
   }

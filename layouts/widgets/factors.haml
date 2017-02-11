@@ -14,10 +14,10 @@
   %h1.block-title
     %strong Factores
   .grid-noBottom
-    .col-4
+    .col-4_sm-12_md-5
       %ul.factors-list
         - ul.each do |li|
           %li.factors-list-item
             %a.factors-list-link{:href=>li[:href], :title=>li[:title]}= li[:title]
-    .col-8
+    .col-8_sm-12_md-7
       %img.lzl.solidity-img{:srcset=>img.join(",")}
