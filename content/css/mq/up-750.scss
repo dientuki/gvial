@@ -5,6 +5,21 @@
   .main-wrapper {
     width: 100%;
   }
+
+  .our-company {
+    padding: {
+      left: (16em/$fs);
+      right: (16em/$fs);
+    }
+
+    [class*="col-6"]{
+      margin-top: (16em/$fs);
+
+      &:first-of-type {
+        margin-top: 0;
+      }
+    }
+  }
 }
 
 

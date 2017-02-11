@@ -3,6 +3,12 @@
 
 
 @media #{$gl-sm}{
+
+  #header {
+    display: none;
+    visibility: hidden;
+  }
+
   .main-wrapper {
     width: (750em/$fs);
   }
