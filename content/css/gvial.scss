@@ -42,17 +42,47 @@ body {
   overflow: hidden;
 }
 
+.main-wrapper {
+  width: (1170em/$fs);
+  margin: 0 auto;
+  position: relative;
+  height: 100%;
+}
+
 .block {
+  margin-top: (40em/$fs);
+  position: relative;
+
   .block-title {
     $tfs:50;
     font-size: #{$tfs/$fs}em;
-    font-family: 'Roboto Bold';
     color:#464646;
     text-transform: uppercase;
     line-height: 1em;
     margin-bottom: (25em/$tfs);
 
+    strong {
+      font-family: 'Roboto Bold';
+      font-weight: bold;
+    }
   }
+
+  .block-img-bg {
+    position: absolute;
+    left: 50%;
+    top: 0;
+    margin: 0 auto;
+    height: 100%;
+    transform: translateX(-50%);
+  }
+}
+
+.block-no-top{
+  margin-top: 0;
+}
+
+.our-company {
+  background: #D9E3EA;
 }
 
 .menu-container {
@@ -60,13 +90,12 @@ body {
   background: none !important;
 }
 
-.main-wrapper {
-  width: 1170px;
-  margin: 0 auto;
-  position: relative;
-  height: 100%;
-}
 
+
+@import "widgets/header";
 @import "widgets/solidity";
+@import "widgets/products-services";
 @import "widgets/factors";
+
+@import "mq/mediaqueries";
 

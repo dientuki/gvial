@@ -21,4 +21,4 @@
     %ul.main-wrapper.menu-container
       - menus.each do |menu|
         %li.menu-item
-          %a.menu-link{:class=>('selected' if (@item[:selected] == menu[:href])  ), :href=>relative_path_to("/#{menu[:href]}.html"), :title=>menu[:title]}= menu[:title]
+          %a.menu-link{:class=>('selected' if (@item[:selected] == menu[:href])  ), :href=>relative_path_to("/#{menu[:href]}.html"), :title=>menu[:title]}= menu[:text]

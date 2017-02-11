@@ -6,9 +6,9 @@ $gl-colName:   col !default;
 $gl-gutter:    (16rem/16) !default; // Total
 $gl-col-bottom: $gl-gutter !default;
 
-$gl-xs:        "screen and (max-width: 35.5em)" !default; // up to 568px
-$gl-sm:        "screen and (max-width: 48em)" !default; // max 768px
-$gl-md:        "screen and (max-width: 64em)" !default; // max 1024px
+$gl-xs:        "screen and (max-width: 46.87em)" !default; // up to 750px
+$gl-sm:        "screen and (max-width: 60.62em)" !default; // max 970px
+$gl-md:        "screen and (max-width: 73.12em)" !default; // max 1170px
 $gl-lg:        "screen and (max-width: 80em)" !default; // max 1280px
 
 $glp_col-1: (100%/12);

@@ -16,12 +16,13 @@
   }
 
   .factors-list-link {
-    $tfs:40;
+    $tfs:38;
     font-size: #{$tfs/$fs}em;
     color:white;
     display: block;
     padding-left: (15em/$tfs);
     text-transform: uppercase;
     font-family: "Roboto Bold" ;
+    text-decoration: none;
   }
 }
