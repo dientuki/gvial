@@ -32,12 +32,6 @@ body {
   color:#464646;
 }
 
-#primary-navigation {
-  height: (52em/$fs);
-  padding: (4em/$fs) 0;
-  background: #f1f1f1;
-}
-
 #main {
   overflow: hidden;
 }
@@ -81,11 +75,6 @@ body {
   margin-top: 0;
 }
 
-.our-company {
-  background: #D9E3EA;
-  padding: (16em/$fs) 0 (32em/$fs) 0;
-}
-
 .menu-container {
   position: relative;
   background: none !important;
@@ -97,6 +86,7 @@ body {
 @import "widgets/solidity";
 @import "widgets/products-services";
 @import "widgets/factors";
+@import "widgets/small-shit";
 
 @import "mq/mediaqueries";
 

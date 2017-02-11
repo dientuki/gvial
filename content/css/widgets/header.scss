@@ -49,6 +49,10 @@
 }
 
 #primary-navigation {
+  height: (52em/$fs);
+  padding: (4em/$fs) 0;
+  background: #f1f1f1;
+  
   .menu-container {
     display: block;
     height: (52em/$fs);

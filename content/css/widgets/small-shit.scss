@@ -1,0 +1,17 @@
+@import "../vars";
+
+.our-company {
+  background: #D9E3EA;
+  padding: (16em/$fs) 0 (32em/$fs) 0;
+}
+
+.our-projects {
+  .our-projects-title {
+    $tfs:78;
+    font-size: #{$tfs/$fs}em;
+    position: absolute;
+    top:50%;
+    transform: translateY(-50%);
+    text-shadow: (1em/$tfs) (1em/$tfs) (2em/$tfs) rgba(0,0,0,.5), (-1em/$tfs) (-1em/$tfs) (2em/$tfs) rgba(0,0,0,.5);
+  }
+}
