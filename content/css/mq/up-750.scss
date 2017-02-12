@@ -73,18 +73,20 @@
 
   #primary-navigation {
     position: fixed;
-    left: (-200em/$fs);
+    left: (-250em/$fs);
     top: (56em/$fs);
     z-index: 8;
     padding: 0;
     height: 100%;
-    box-shadow: (5em/$fs) 0 (5em/$fs) 0 rgba(0, 0, 0, 0.1);
-    background: rgba(#f1f1f1,.95);
-    width: (200em/$fs);
+    width: 100%;
+    background: none;
 
     .menu-container {
-      margin-top: (20em/$fs);
-
+      margin: 0;
+      width: (250em/$fs);
+      background: rgba(#f1f1f1,.95) !important;
+      box-shadow: (5em/$fs) 0 (5em/$fs) 0 rgba(0, 0, 0, 0.1);
+      height: 100%;
     }
 
     .menu-item {
@@ -92,6 +94,13 @@
       margin:0 !important;
       border:none;
       width: 100%;
+      height: (48em/$fs);
+    }
+
+    .menu-link {
+      span {
+        display: inline;
+      }
     }
   }
 }
