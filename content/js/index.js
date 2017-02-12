@@ -1,10 +1,8 @@
-/**
- * Created by dientuki on 05/02/17.
- */
+//import LazyLoad from 'vanilla-lazyload';
+import Navigation from "./modules/Navigation";
 
-
-import LazyLoad from 'vanilla-lazyload';
-
+new Navigation();
+/*
 let myLazyLoad = new LazyLoad({
   // example of options object -> see options section
   container: document.getElementById('scrollPane'),
@@ -12,3 +10,4 @@ let myLazyLoad = new LazyLoad({
   data_src: "src",
   data_srcset: "srcset",
 });
+*/

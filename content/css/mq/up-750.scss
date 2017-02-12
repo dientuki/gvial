@@ -77,7 +77,8 @@
     top: (56em/$fs);
     z-index: 8;
     padding: 0;
-    height: 100%;
+    height: auto;
+    bottom:0;
     width: 100%;
     background: none;
 
@@ -87,6 +88,8 @@
       background: rgba(#f1f1f1,.95) !important;
       box-shadow: (5em/$fs) 0 (5em/$fs) 0 rgba(0, 0, 0, 0.1);
       height: 100%;
+      padding-top: (36em/$fs);
+      box-sizing: border-box;
     }
 
     .menu-item {
