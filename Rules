@@ -9,26 +9,15 @@
 #  layout '/default.*'
 #end
 
+passthrough '/images/content/**/*'
+passthrough '/images/customers/**/*'
+
 ignore '/js/**/*'
-
-compile '/images/**/*' do
-end
-
-compile '/css/**/*' do
-  case item[:extension]
-    when 'scss'
-      filter :erb
-      filter :sass, :syntax => :scss, :style => :expanded
-    when 'css'
-      filter :erb
-  end
-end
-
-#compile '/js/**/*' do
-#end
-
-compile '/fonts/**/*' do
-end
+ignore '/js6/**/*'
+ignore '/images/**/*'
+ignore '/css/**/*'
+ignore '/scss/**/*'
+ignore '/fonts/**/*'
 
 compile '/**/*.{haml}' do
   filter :haml, :ugly => true, :attr_wrapper => '"', :format => :html5
@@ -37,8 +26,6 @@ end
 
 route '/**/*' do
   case item[:extension]
-    when 'scss'
-      item.identifier.to_s.sub('.scss', '.css')
     when 'haml'
       item.identifier.to_s.sub('.haml', '.html')
     else

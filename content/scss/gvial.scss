@@ -1,7 +1,7 @@
-@import "vars";
-@import "normalize";
-@import "gridlex";
-@import "helpers";
+@import "_vars";
+@import "_normalize";
+@import "_gridlex";
+@import "_helpers";
 
 @font-face {
   font-family: 'Roboto Bold';
@@ -91,13 +91,13 @@ body {
 
 
 
-@import "widgets/header";
-@import "widgets/solidity";
-@import "widgets/products-services";
-@import "widgets/factors";
-@import "widgets/small-shit";
+@import "widgets/_header";
+@import "widgets/_solidity";
+@import "widgets/_products-services";
+@import "widgets/_factors";
+@import "widgets/_small-shit";
 
-@import "widgets/main-icon";
+@import "widgets/_main-icon";
 
-@import "mq/mediaqueries";
+@import "mq/_mediaqueries";
 

@@ -1,5 +1,5 @@
 module.exports = {
-  entry: './content/js/index.js',
+  entry: './content/js6/index.js',
   module:{
     loaders: [
       {
@@ -13,6 +13,6 @@ module.exports = {
     ]
   },
   output: {
-    filename: './output/js/gvial.js',
+    filename: './content/js/gvial.js',
   }
 };

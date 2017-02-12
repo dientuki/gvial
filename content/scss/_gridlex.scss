@@ -3,7 +3,7 @@
     Just a Flexbox Grid System
 ========================================================================== */
 
-@import "gridlex-vars";
+@import "_gridlex-vars";
 
 [class*="#{$gl-gridName}"]{
   box-sizing: border-box;
