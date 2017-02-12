@@ -22,6 +22,17 @@
     }
   }
 
+  .header {
+    position: fixed;
+    top:0;
+    height: (56em/$fs);
+    left: 0;
+    right: 0;
+    background: white;
+    box-shadow: 0 (3em/$fs) (3em/$fs) 0 rgba(black,.1);
+    z-index: 9;
+  }
+
   .solidity {
     .solidity-content {
       top: 50%;
@@ -36,6 +47,7 @@
   }
 
   #header {
+    margin: (66em/$fs) (10em/$fs) (10em/$fs) (10em/$fs);
     .logo {
       left:0;
       top:0;
@@ -45,7 +57,6 @@
     }
 
     > .main-wrapper {
-      margin: (10em/$fs);
       width: auto;
     }
 
@@ -55,9 +66,33 @@
     }
   }
 
+  .main-icon {
+    display: block;
+    visibility: visible;
+  }
+
   #primary-navigation {
-    display: none;
-    visibility: hidden;
+    position: fixed;
+    left: (-200em/$fs);
+    top: (56em/$fs);
+    z-index: 8;
+    padding: 0;
+    height: 100%;
+    box-shadow: (5em/$fs) 0 (5em/$fs) 0 rgba(0, 0, 0, 0.1);
+    background: rgba(#f1f1f1,.95);
+    width: (200em/$fs);
+
+    .menu-container {
+      margin-top: (20em/$fs);
+
+    }
+
+    .menu-item {
+      float:none;
+      margin:0 !important;
+      border:none;
+      width: 100%;
+    }
   }
 }
 
