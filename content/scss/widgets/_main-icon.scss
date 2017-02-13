@@ -66,8 +66,19 @@ body {
       }
     }
 
-    #primary-navigation {
-      left: 0;
+    #primary-navigation  {
+      left:0;
+
+      transition: {
+        property: left;
+        duration: $midTime;
+        timing-function: cubic-bezier(0.19, 1, 0.22, 1);
+        delay: 0ms;
+      }
+
+      .menu-container{
+        left: 0;
+      }
     }
   }
 }
@@ -175,12 +186,26 @@ body {
 }
 
 #primary-navigation {
+  left:-100%;
+
   will-change: left;
 
   transition: {
     property: left;
-    duration: $midTime;
+    duration: 0ms;
     timing-function: cubic-bezier(0.19, 1, 0.22, 1);
-    delay: 0s;
+    delay: $totalTime;
+  }
+
+
+  .menu-container{
+    will-change: left;
+
+    transition: {
+      property: left;
+      duration: $midTime;
+      timing-function: cubic-bezier(0.19, 1, 0.22, 1);
+      delay: 0s;
+    }
   }
 }

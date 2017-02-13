@@ -73,7 +73,8 @@
 
   #primary-navigation {
     position: fixed;
-    left: (-250em/$fs);
+    //left: (-250em/$fs);
+    left: -100%;
     top: (56em/$fs);
     z-index: 8;
     padding: 0;
@@ -90,6 +91,8 @@
       height: 100%;
       padding-top: (36em/$fs);
       box-sizing: border-box;
+      left: (-250em/$fs);
+      position: relative;
     }
 
     .menu-item {
