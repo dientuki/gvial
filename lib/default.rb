@@ -5,6 +5,8 @@ require 'json'
 
 def get_hash(file)
 
+  return file
+
   tmp = File.read('output/manifest.json')
   data_hash = JSON.parse(tmp)
 

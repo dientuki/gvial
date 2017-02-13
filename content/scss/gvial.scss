@@ -12,7 +12,6 @@
   url('../fonts/roboto-bold.svg#robotobold') format('svg');
   font-weight: normal;
   font-style: normal;
-
 }
 
 @font-face {
@@ -24,7 +23,6 @@
   url('../fonts/roboto-light.svg#robotolight') format('svg');
   font-weight: normal;
   font-style: normal;
-
 }
 
 body {
@@ -68,6 +66,8 @@ body {
     margin: 0 auto;
     height: 100%;
     transform: translateX(-50%);
+    width: 100%;
+    background-color:red;
   }
 }
 
@@ -89,8 +89,6 @@ body {
   height: calc(100% + 50px);
 }
 
-
-
 @import "widgets/_header";
 @import "widgets/_solidity";
 @import "widgets/_products-services";
@@ -100,4 +98,3 @@ body {
 @import "widgets/_main-icon";
 
 @import "mq/_mediaqueries";
-
