@@ -8,7 +8,7 @@
   ul << {:title => "Innovación", :href=> '#'}
 
   img = Array.new
-  img << relative_path_to("/images/content/factors-2000.jpg") + " 2000w"
+  img << relative_path_to("/images/content/factors.jpg") + " 2000w"
 
 %section.block.factors.main-wrapper
   %h1.block-title
@@ -19,5 +19,5 @@
         - ul.each do |li|
           %li.factors-list-item
             %a.factors-list-link{:href=>li[:href], :title=>li[:title]}= li[:title]
-    .col-8_sm-12_md-7
-      %img.lzl.solidity-img{:srcset=>img.join(",")}
+    .col-8_sm-12_md-7.factors-fix-sm
+      %img.lzl.factors-img{:"data-original"=>img[0].partition(" ").first ,:"data-original-set"=>img.join(","), :src=>"data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEHAAEALAAAAAABAAEAAAICTAEAOw=="}

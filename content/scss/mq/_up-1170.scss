@@ -17,8 +17,40 @@
     }
   }
 
-
   .main-wrapper {
     width: (970rem/$fs);
+  }
+}
+
+
+@media screen and (min-width: 60.62em) and (max-width: 73.12em) {
+  .factors-fix-sm {
+    position: relative;
+    overflow: hidden;
+
+    &:after,
+    &:before {
+      content: "";
+      height: 100%;
+      width: (8em/$fs);
+      background: white;
+      top: 0;
+      position: absolute;
+      z-index: 9;
+    }
+
+    &:after {
+      left: 0;
+    }
+    &:before {
+      right: 0;
+    }
+
+    .factors-img {
+      width: auto;
+      height: 100%;
+      position: absolute;
+      left: (-100em/$fs);
+    }
   }
 }

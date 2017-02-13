@@ -1,7 +1,7 @@
 ﻿:ruby
   img = Array.new
-  img << relative_path_to("/images/content/solidez-320.jpg") + " 750w"
-  img << relative_path_to("/images/content/solidez-780.jpg") + " 970w"
+  img << relative_path_to("/images/content/solidez-750.jpg") + " 750w"
+  img << relative_path_to("/images/content/solidez-970.jpg") + " 970w"
   img << relative_path_to("/images/content/solidez-1170.jpg") + " 1170w"
   img << relative_path_to("/images/content/solidez-2000.jpg") + " 2000w"
 
@@ -9,7 +9,7 @@
 %section.block.block-no-top.solidity
   /
     %img.lzl.block-img-bg{:"data-original"=>img[3] ,:"data-original-set"=>img.join(","), :src=>"data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEHAAEALAAAAAABAAEAAAICTAEAOw=="}
-  %img.lzl.block-img-bg{:"data-original"=>img[0] ,:"data-original-set"=>img.join(","), :src=>"data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEHAAEALAAAAAABAAEAAAICTAEAOw=="}
+  %img.lzl.block-img-bg{:"data-original"=>img[0].partition(" ").first ,:"data-original-set"=>img.join(","), :src=>"data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEHAAEALAAAAAABAAEAAAICTAEAOw=="}
   .main-wrapper
     .solidity-content
       %h1.solidity-title Solidez

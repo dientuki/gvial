@@ -14,7 +14,7 @@
     "webpack": "webpack",
     "build:js": "npm run webpack && cp -r content/js output/js",
     "watch:js": "nodemon --watch js6/ -x \"npm run build:js\"",
-    "build:css": "npm run scss && cp -r content/css output/css",
+    "build:css": "npm run scss && cp -r content/css output",
     "watch:css": "nodemon -e scss -x \"npm run build:css\"",
     "build:all": "npm run clean && npm run build:css && npm run build:js",
     "watch:all": "parallelshell \"npm run watch:css\" \"npm run watch:js\"",

@@ -1422,9 +1422,7 @@ body {
     top: 0;
     margin: 0 auto;
     height: 100%;
-    transform: translateX(-50%);
-    width: 100%;
-    background-color: red; }
+    transform: translateX(-50%); }
 
 .block-no-top {
   margin-top: 0; }
@@ -1571,6 +1569,9 @@ body {
   font-family: "Roboto Bold";
   text-decoration: none; }
 
+.factors .factors-img {
+  width: 100%; }
+
 .our-company {
   background: #D9E3EA;
   padding: 1em 0 2em 0; }
@@ -1697,6 +1698,28 @@ body.is-menu-opened #primary-navigation {
     font-size: 3.75em; }
   .main-wrapper {
     width: 60.62rem; } }
+
+@media screen and (min-width: 60.62em) and (max-width: 73.12em) {
+  .factors-fix-sm {
+    position: relative;
+    overflow: hidden; }
+    .factors-fix-sm:after, .factors-fix-sm:before {
+      content: "";
+      height: 100%;
+      width: 0.5em;
+      background: white;
+      top: 0;
+      position: absolute;
+      z-index: 9; }
+    .factors-fix-sm:after {
+      left: 0; }
+    .factors-fix-sm:before {
+      right: 0; }
+    .factors-fix-sm .factors-img {
+      width: auto;
+      height: 100%;
+      position: absolute;
+      left: -6.25em; } }
 
 @media screen and (max-width: 60.62em) {
   .block [class*="col-"] {
