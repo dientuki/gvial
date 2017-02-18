@@ -1,0 +1,14 @@
+@import "../_vars";
+
+.contact-form {
+  .form-text,
+  .form-textarea {
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  label {
+    display:none;
+    visibility: hidden;
+  }
+}

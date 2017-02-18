@@ -1572,6 +1572,15 @@ body {
 .factors .factors-img {
   width: 100%; }
 
+.contact-form .form-text,
+.contact-form .form-textarea {
+  width: 100%;
+  box-sizing: border-box; }
+
+.contact-form label {
+  display: none;
+  visibility: hidden; }
+
 .our-company {
   background: #D9E3EA;
   padding: 1em 0 2em 0; }
@@ -1582,6 +1591,9 @@ body {
   top: 50%;
   transform: translateY(-50%);
   text-shadow: 0.01em 0.01em 0.03em rgba(0, 0, 0, 0.5), -0.01em -0.01em 0.03em rgba(0, 0, 0, 0.5); }
+
+#map {
+  height: 29.12em; }
 
 body.is-menu-opened .main-icon .burger-icon {
   transform: scaleX(0);

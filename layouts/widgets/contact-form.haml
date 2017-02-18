@@ -1,0 +1,20 @@
+%section.block.main-wrapper
+  %h1.block-title
+    %strong Contactenos
+
+  %form#contact-form.contact-form.grid{:action=>"sendform.php", :method=>"POST"}
+    %fieldset.grid.col-12
+      .col-4
+        %label{:for=>"frm-name"} Nombre
+        %input#frm-name.form-text{:type=>"text", :name=>"name", :required=>"required", :placeholder=>"Nombre"}
+      .col-4
+        %label{:for=>"frm-phone"} Movil
+        %input#frm-phone.form-text{:type=>"tel", :name=>"phone", :placeholder=>"Movil"}
+      .col-4
+        %label{:for=>"frm-email"} Email
+        %input#frm-email.form-text{:type=>"email", :name=>"email", :required=>"required", :placeholder=>"Email"}
+      .col-12
+        %label{:for=>"frm-message"} Mensaje
+        %textarea#frm-message.form-textarea{:name=>"message", :required=>"required", :placeholder=>"Mensaje"}
+    #recaptcha.form-recaptcha.col-4
+    %input.col-1.form-submit{:type=>"submit", :value=>"Enviar"}

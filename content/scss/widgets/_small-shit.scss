@@ -15,3 +15,7 @@
     text-shadow: (1em/$tfs) (1em/$tfs) (2em/$tfs) rgba(0,0,0,.5), (-1em/$tfs) (-1em/$tfs) (2em/$tfs) rgba(0,0,0,.5);
   }
 }
+
+#map {
+  height: (466em/$fs);
+}
