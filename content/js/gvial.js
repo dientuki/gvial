@@ -63,7 +63,7 @@
 /******/ 	__webpack_require__.p = "";
 
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 29);
+/******/ 	return __webpack_require__(__webpack_require__.s = 31);
 /******/ })
 /************************************************************************/
 /******/ ([
@@ -380,7 +380,7 @@ module.exports = {
 /* WEBPACK VAR INJECTION */(function(process) {
 
 var utils = __webpack_require__(0);
-var normalizeHeaderName = __webpack_require__(26);
+var normalizeHeaderName = __webpack_require__(28);
 
 var PROTECTION_PREFIX = /^\)\]\}',?\n/;
 var DEFAULT_CONTENT_TYPE = {
@@ -481,12 +481,12 @@ module.exports = defaults;
 /* WEBPACK VAR INJECTION */(function(process) {
 
 var utils = __webpack_require__(0);
-var settle = __webpack_require__(18);
-var buildURL = __webpack_require__(21);
-var parseHeaders = __webpack_require__(27);
-var isURLSameOrigin = __webpack_require__(25);
+var settle = __webpack_require__(20);
+var buildURL = __webpack_require__(23);
+var parseHeaders = __webpack_require__(29);
+var isURLSameOrigin = __webpack_require__(27);
 var createError = __webpack_require__(5);
-var btoa = (typeof window !== 'undefined' && window.btoa && window.btoa.bind(window)) || __webpack_require__(20);
+var btoa = (typeof window !== 'undefined' && window.btoa && window.btoa.bind(window)) || __webpack_require__(22);
 
 module.exports = function xhrAdapter(config) {
   return new Promise(function dispatchXhrRequest(resolve, reject) {
@@ -582,7 +582,7 @@ module.exports = function xhrAdapter(config) {
     // This is only done if running in a standard browser environment.
     // Specifically not if we're in a web worker, or react-native.
     if (utils.isStandardBrowserEnv()) {
-      var cookies = __webpack_require__(23);
+      var cookies = __webpack_require__(25);
 
       // Add xsrf header
       var xsrfValue = (config.withCredentials || isURLSameOrigin(config.url)) && config.xsrfCookieName ?
@@ -703,7 +703,7 @@ module.exports = function isCancel(value) {
 "use strict";
 
 
-var enhanceError = __webpack_require__(17);
+var enhanceError = __webpack_require__(19);
 
 /**
  * Create an Error with the specified message, config, error code, and response.
@@ -929,6 +929,46 @@ process.umask = function() { return 0; };
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
+class Gmap {
+  constructor(el) {
+    this.el = el;
+
+    window.initMap = () =>{
+      let uluru = {lat: -25.363, lng: 131.044};
+      let map = new google.maps.Map(document.getElementById(this.el), {
+        zoom: 4,
+        center: uluru
+      });
+      let marker = new google.maps.Marker({
+        position: uluru,
+        map: map
+      });
+    }
+
+    this.init();
+  }
+
+  init() {
+
+    let element = document.getElementById(this.el);
+
+    if (element != null){
+      let js = document.createElement('script');
+      js.type = 'text/javascript';
+      js.async = true;
+      js.src = "https://maps.googleapis.com/maps/api/js?key=AIzaSyBRUxm8llw8uuQ2jNjSWlnQKtBIJRG2rMo&callback=initMap";
+      document.head.appendChild(js);
+    }
+  }
+}
+/* harmony export (immutable) */ __webpack_exports__["a"] = Gmap;
+
+
+/***/ }),
+/* 9 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
 class Navigation {
     constructor(opts) {
         opts = {
@@ -976,11 +1016,11 @@ class Navigation {
 
 
 /***/ }),
-/* 9 */
+/* 10 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_axios__ = __webpack_require__(11);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_axios__ = __webpack_require__(13);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_axios___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_axios__);
 
 
@@ -1001,10 +1041,7 @@ class SendForm {
 
   onSubmit() {
 
-    console.log(this.data)
-    console.log(document.querySelector('#g-recaptcha-response').value)
     let url = 'https://www.google.com/recaptcha/api/siteverify?secret=6LcA_xUUAAAAAFrAa_54CsV4Pu2d7RK6l8yIS2sD&response=' + document.querySelector('#g-recaptcha-response').value
-  console.log(url);
 
     __WEBPACK_IMPORTED_MODULE_0_axios___default()({ method: 'get',
             url: url
@@ -1026,7 +1063,41 @@ class SendForm {
 
 
 /***/ }),
-/* 10 */
+/* 11 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+class reCaptcha {
+  constructor(el) {
+    this.el = el;
+
+    window.onloadCallback = () =>{
+      grecaptcha.render(this.el, {
+        'sitekey' : '6LcA_xUUAAAAALWAW6h71X2iQiOtwcfJGo--y5ge'
+      });
+    }
+
+    this.init();
+  }
+
+  init() {
+
+    let element = document.getElementById(this.el);
+
+    if (element != null){
+      let js = document.createElement('script');
+      js.type = 'text/javascript';
+      js.async = true;
+      js.src = "https://www.google.com/recaptcha/api.js?onload=onloadCallback&render=explicit";
+      document.head.appendChild(js);
+    }
+  }
+}
+/* harmony export (immutable) */ __webpack_exports__["a"] = reCaptcha;
+
+
+/***/ }),
+/* 12 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;!function(a,b){ true?!(__WEBPACK_AMD_DEFINE_ARRAY__ = [], __WEBPACK_AMD_DEFINE_FACTORY__ = (b),
@@ -1036,13 +1107,13 @@ var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_
 //# sourceMappingURL=lazyload.min.js.map
 
 /***/ }),
-/* 11 */
+/* 13 */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(12);
+module.exports = __webpack_require__(14);
 
 /***/ }),
-/* 12 */
+/* 14 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -1050,7 +1121,7 @@ module.exports = __webpack_require__(12);
 
 var utils = __webpack_require__(0);
 var bind = __webpack_require__(6);
-var Axios = __webpack_require__(14);
+var Axios = __webpack_require__(16);
 var defaults = __webpack_require__(1);
 
 /**
@@ -1085,14 +1156,14 @@ axios.create = function create(instanceConfig) {
 
 // Expose Cancel & CancelToken
 axios.Cancel = __webpack_require__(3);
-axios.CancelToken = __webpack_require__(13);
+axios.CancelToken = __webpack_require__(15);
 axios.isCancel = __webpack_require__(4);
 
 // Expose all/spread
 axios.all = function all(promises) {
   return Promise.all(promises);
 };
-axios.spread = __webpack_require__(28);
+axios.spread = __webpack_require__(30);
 
 module.exports = axios;
 
@@ -1101,7 +1172,7 @@ module.exports.default = axios;
 
 
 /***/ }),
-/* 13 */
+/* 15 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -1165,7 +1236,7 @@ module.exports = CancelToken;
 
 
 /***/ }),
-/* 14 */
+/* 16 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -1173,10 +1244,10 @@ module.exports = CancelToken;
 
 var defaults = __webpack_require__(1);
 var utils = __webpack_require__(0);
-var InterceptorManager = __webpack_require__(15);
-var dispatchRequest = __webpack_require__(16);
-var isAbsoluteURL = __webpack_require__(24);
-var combineURLs = __webpack_require__(22);
+var InterceptorManager = __webpack_require__(17);
+var dispatchRequest = __webpack_require__(18);
+var isAbsoluteURL = __webpack_require__(26);
+var combineURLs = __webpack_require__(24);
 
 /**
  * Create a new instance of Axios
@@ -1257,7 +1328,7 @@ module.exports = Axios;
 
 
 /***/ }),
-/* 15 */
+/* 17 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -1316,14 +1387,14 @@ module.exports = InterceptorManager;
 
 
 /***/ }),
-/* 16 */
+/* 18 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 
 var utils = __webpack_require__(0);
-var transformData = __webpack_require__(19);
+var transformData = __webpack_require__(21);
 var isCancel = __webpack_require__(4);
 var defaults = __webpack_require__(1);
 
@@ -1402,7 +1473,7 @@ module.exports = function dispatchRequest(config) {
 
 
 /***/ }),
-/* 17 */
+/* 19 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -1428,7 +1499,7 @@ module.exports = function enhanceError(error, config, code, response) {
 
 
 /***/ }),
-/* 18 */
+/* 20 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -1460,7 +1531,7 @@ module.exports = function settle(resolve, reject, response) {
 
 
 /***/ }),
-/* 19 */
+/* 21 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -1487,7 +1558,7 @@ module.exports = function transformData(data, headers, fns) {
 
 
 /***/ }),
-/* 20 */
+/* 22 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -1530,7 +1601,7 @@ module.exports = btoa;
 
 
 /***/ }),
-/* 21 */
+/* 23 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -1605,7 +1676,7 @@ module.exports = function buildURL(url, params, paramsSerializer) {
 
 
 /***/ }),
-/* 22 */
+/* 24 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -1624,7 +1695,7 @@ module.exports = function combineURLs(baseURL, relativeURL) {
 
 
 /***/ }),
-/* 23 */
+/* 25 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -1684,7 +1755,7 @@ module.exports = (
 
 
 /***/ }),
-/* 24 */
+/* 26 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -1705,7 +1776,7 @@ module.exports = function isAbsoluteURL(url) {
 
 
 /***/ }),
-/* 25 */
+/* 27 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -1780,7 +1851,7 @@ module.exports = (
 
 
 /***/ }),
-/* 26 */
+/* 28 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -1799,7 +1870,7 @@ module.exports = function normalizeHeaderName(headers, normalizedName) {
 
 
 /***/ }),
-/* 27 */
+/* 29 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -1843,7 +1914,7 @@ module.exports = function parseHeaders(headers) {
 
 
 /***/ }),
-/* 28 */
+/* 30 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -1877,28 +1948,59 @@ module.exports = function spread(callback) {
 
 
 /***/ }),
-/* 29 */
+/* 31 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__modules_SendForm__ = __webpack_require__(9);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_vanilla_lazyload__ = __webpack_require__(10);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_vanilla_lazyload___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_vanilla_lazyload__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__modules_Navigation__ = __webpack_require__(8);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__modules_Gmap__ = __webpack_require__(8);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__modules_reCaptcha__ = __webpack_require__(11);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__modules_SendForm__ = __webpack_require__(10);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_vanilla_lazyload__ = __webpack_require__(12);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_vanilla_lazyload___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_vanilla_lazyload__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__modules_Navigation__ = __webpack_require__(9);
 
 
 
 
-new __WEBPACK_IMPORTED_MODULE_2__modules_Navigation__["a" /* default */]();
-new __WEBPACK_IMPORTED_MODULE_0__modules_SendForm__["a" /* default */]('#contact-form');
 
-let myLazyLoad = new __WEBPACK_IMPORTED_MODULE_1_vanilla_lazyload___default.a({
+
+new __WEBPACK_IMPORTED_MODULE_4__modules_Navigation__["a" /* default */]();
+new __WEBPACK_IMPORTED_MODULE_2__modules_SendForm__["a" /* default */]('#contact-form');
+new __WEBPACK_IMPORTED_MODULE_1__modules_reCaptcha__["a" /* default */]('recaptcha');
+new __WEBPACK_IMPORTED_MODULE_0__modules_Gmap__["a" /* default */]('map');
+
+let myLazyLoad = new __WEBPACK_IMPORTED_MODULE_3_vanilla_lazyload___default.a({
   // example of options object -> see options section
   elements_selector: ".lzl",
   data_src: "original",
   data_srcset: "original-set"
 });
+
+/*
+
+function initMap() {
+  let uluru = {lat: -25.363, lng: 131.044};
+  let map = new google.maps.Map(document.getElementById('map'), {
+    zoom: 4,
+    center: uluru
+  });
+  let marker = new google.maps.Marker({
+    position: uluru,
+    map: map
+  });
+}
+
+if (body.classList.contains('hasMap')){
+  js = document.createElement('script');
+  js.type = 'text/javascript';
+  js.async = true;
+  js.src = "https://maps.googleapis.com/maps/api/js?key=AIzaSyBRUxm8llw8uuQ2jNjSWlnQKtBIJRG2rMo&callback=initMap";
+  document.head.appendChild(js);
+}
+
+*/
+
 
 /***/ })
 /******/ ]);

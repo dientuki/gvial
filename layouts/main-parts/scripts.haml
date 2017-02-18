@@ -1,44 +1,9 @@
 - js = relative_path_to(get_hash('/js/gvial.js'))
 
 :javascript
-  var js = document.createElement('script'),
-      s = document.getElementsByTagName('script')[0],
-      selected = '#{@item[:selected]}';
-
-  function initMap() {
-      console.log('inicio');
-        var uluru = {lat: -25.363, lng: 131.044};
-        var map = new google.maps.Map(document.getElementById('map'), {
-          zoom: 4,
-          center: uluru
-        });
-        var marker = new google.maps.Marker({
-          position: uluru,
-          map: map
-        });
-      }
-
-  var onloadCallback = function() {
-        grecaptcha.render('recaptcha', {
-          'sitekey' : '6LcA_xUUAAAAALWAW6h71X2iQiOtwcfJGo--y5ge'
-        });
-      };
+  var js = document.createElement('script');
 
   js.type = 'text/javascript';
   js.async = true;
   js.src = '#{js}';
-  s.parentNode.insertBefore(js, s);
-
-  if (selected == 'index') {
-    js = document.createElement('script');
-    js.type = 'text/javascript';
-    js.async = true;
-    js.src = "https://www.google.com/recaptcha/api.js?onload=onloadCallback&render=explicit";
-    s.parentNode.insertBefore(js, s);
-
-    js = document.createElement('script');
-    js.type = 'text/javascript';
-    js.async = true;
-    js.src = "https://maps.googleapis.com/maps/api/js?key=AIzaSyBRUxm8llw8uuQ2jNjSWlnQKtBIJRG2rMo&callback=initMap";
-    s.parentNode.insertBefore(js, s);
-  }
+  document.head.appendChild(js);
