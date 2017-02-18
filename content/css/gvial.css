@@ -1769,6 +1769,14 @@ body.is-menu-opened #primary-navigation {
       margin-top: 1em; }
       .block [class*="col-"]:first-of-type {
         margin-top: 0; }
+  .contact-form fieldset [class*="col-"] {
+    padding-bottom: 0; }
+  .contact-form .form-recaptcha {
+    margin-top: 1em; }
+    .contact-form .form-recaptcha > div {
+      margin: 0 auto; }
+  .map {
+    padding: 0; }
   .header {
     position: fixed;
     top: 0;
