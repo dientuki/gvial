@@ -4,56 +4,16 @@ selected: 'index'
 ---
 
 :ruby
-  img1 = Array.new
-  img1 << relative_path_to("/images/content/pintura-convencional-2000.jpg") + " 750w"
-  img1 << relative_path_to("/images/content/pintura-convencional-970.jpg") + " 970w"
-  img1 << relative_path_to("/images/content/pintura-convencional-1170.jpg") + " 1170w"
-  img1 << relative_path_to("/images/content/pintura-convencional-2000.jpg") + " 2000w"
-
-  img2 = Array.new
-  img2 << relative_path_to("/images/content/pintura-alto-desempenio-2000") + " 750w"
-  img2 << relative_path_to("/images/content/pintura-alto-desempenio-970.jpg") + " 970w"
-  img2 << relative_path_to("/images/content/pintura-alto-desempenio-1170.jpg") + " 1170w"
-  img2 << relative_path_to("/images/content/pintura-alto-desempenio-2000.jpg") + " 2000w"
-
-  img3 = Array.new
-  img3 << relative_path_to("/images/content/solidez-750.jpg") + " 750w"
-  img3 << relative_path_to("/images/content/solidez-970.jpg") + " 970w"
-  img3 << relative_path_to("/images/content/solidez-1170.jpg") + " 1170w"
-  img3 << relative_path_to("/images/content/solidez-2000.jpg") + " 2000w"
 
   img4 = Array.new
-  img4 << relative_path_to("/images/content/senializacion-vertical-left-550.jpg") + " 550w"
-  img4 << relative_path_to("/images/content/senializacion-vertical-left-970.jpg") + " 970w"
-  img4 << relative_path_to("/images/content/senializacion-vertical-left-1170.jpg") + " 1170w"
-  img4 << relative_path_to("/images/content/senializacion-vertical-left-2000.jpg") + " 2000w"
-
-  img5 = Array.new
-  img5 << relative_path_to("/images/content/senializacion-vertical-middle-550.jpg") + " 550w"
-  img5 << relative_path_to("/images/content/senializacion-vertical-middle-970.jpg") + " 970w"
-  img5 << relative_path_to("/images/content/senializacion-vertical-middle-1170.jpg") + " 1170w"
-  img5 << relative_path_to("/images/content/senializacion-vertical-middle-2000.jpg") + " 2000w"
-
-  img6 = Array.new
-  img6 << relative_path_to("/images/content/senializacion-vertical-right-550.jpg") + " 550w"
-  img6 << relative_path_to("/images/content/senializacion-vertical-right-970.jpg") + " 970w"
-  img6 << relative_path_to("/images/content/senializacion-vertical-right-1170.jpg") + " 1170w"
-  img6 << relative_path_to("/images/content/senializacion-vertical-right-2000.jpg") + " 2000w"
+  img4 << relative_path_to("/images/content/tachas-550.jpg") + " 550w"
+  img4 << relative_path_to("/images/content/tachas-970.jpg") + " 970w"
+  img4 << relative_path_to("/images/content/tachas-1170.jpg") + " 1170w"
+  img4 << relative_path_to("/images/content/tachas-2000.jpg") + " 2000w"
 
 = render '/products-services/horizontal.haml'
 = render '/products-services/vertical.haml'
-
-%section.block.products-services.main-wrapper
-  %h1.block-title
-    %strong
-      Defensa
-    metálica
-  .grid-noBottom
-    .col-4_sm-12
-      %h3.block-subtitle Vialine
-      %p
-        Somos una empresa Colombiana,  especializada en Señalización y Seguridad Vial; contamos con un importante respaldo internacional y amplia trayectoria en el diseño, planeación,  ejecución y control de destacados proyectos tanto a nivel urbano como  rural a lo largo de todo el territorio nacional.  En G-Vial,  entendemos claramente la enorme responsabilidad que representa la Señalización como factor determinante e imprescindible en la Seguridad  vial y  la protección de los actores de una vía;  es por ello que invertimos de forma constante el profesionalismo, la rigurosidad técni
-    .col-8_sm-12
+= render '/products-services/defend.haml'
 
 %section.block.products-services.main-wrapper
   %h1.block-title.main-wrapper
@@ -61,42 +21,48 @@ selected: 'index'
       Dispositivos de canalización &
     reducción de velocidad
   .grid-noBottom
-    .col-6_md-12
+    .col-6_sm-12
       %article.grid
         .col-6
-          figure
+          .aspect-1-1
+            %img.lzl{:srcset=>img4.join(",")}
         .col-6
           %h1.block-subtitle Tachas
           %p Pintura formulada con resinas acrílicas BASE AGUA, excelente blancura y secado rápido.  Para vías de alto flujo vehicular.  Presenta espesor seco máximo de 14 MILS. Para vías de alto flujo vehicular.  Presenta espesor seco máximo de 14 MILS. Presenta espesor seco.
       %article.grid
         .col-6
-          figure
+          .aspect-1-1
+            %img.lzl{:srcset=>img4.join(",")}
         .col-6
           %h1.block-subtitle Tachas
           %p Pintura formulada con resinas acrílicas BASE AGUA, excelente blancura y secado rápido.  Para vías de alto flujo vehicular.  Presenta espesor seco máximo de 14 MILS. Para vías de alto flujo vehicular.  Presenta espesor seco máximo de 14 MILS. Presenta espesor seco.
       %article.grid
         .col-6
-          figure
+          .aspect-1-1
+            %img.lzl{:srcset=>img4.join(",")}
         .col-6
           %h1.block-subtitle Tachas
           %p Pintura formulada con resinas acrílicas BASE AGUA, excelente blancura y secado rápido.  Para vías de alto flujo vehicular.  Presenta espesor seco máximo de 14 MILS. Para vías de alto flujo vehicular.  Presenta espesor seco máximo de 14 MILS. Presenta espesor seco.
 
-    .col-6_md-12
+    .col-6_sm-12
       %article.grid
         .col-6
-          figure
+          .aspect-1-1
+            %img.lzl{:srcset=>img4.join(",")}
         .col-6
           %h1.block-subtitle Tachas
           %p Pintura formulada con resinas acrílicas BASE AGUA, excelente blancura y secado rápido.  Para vías de alto flujo vehicular.  Presenta espesor seco máximo de 14 MILS. Para vías de alto flujo vehicular.  Presenta espesor seco máximo de 14 MILS. Presenta espesor seco.
       %article.grid
         .col-6
-          figure
+          .aspect-1-1
+            %img.lzl{:srcset=>img4.join(",")}
         .col-6
           %h1.block-subtitle Tachas
           %p Pintura formulada con resinas acrílicas BASE AGUA, excelente blancura y secado rápido.  Para vías de alto flujo vehicular.  Presenta espesor seco máximo de 14 MILS. Para vías de alto flujo vehicular.  Presenta espesor seco máximo de 14 MILS. Presenta espesor seco.
       %article.grid
         .col-6
-          figure
+          .aspect-1-1
+            %img.lzl{:srcset=>img4.join(",")}
         .col-6
           %h1.block-subtitle Tachas
           %p Pintura formulada con resinas acrílicas BASE AGUA, excelente blancura y secado rápido.  Para vías de alto flujo vehicular.  Presenta espesor seco máximo de 14 MILS. Para vías de alto flujo vehicular.  Presenta espesor seco máximo de 14 MILS. Presenta espesor seco.

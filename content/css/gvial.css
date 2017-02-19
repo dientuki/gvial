@@ -1589,6 +1589,9 @@ body {
   height: 33.5em;
   position: relative; }
 
+.products-services .products-services-images {
+  margin-top: 2.5em; }
+
 .our-projects {
   height: 29.12em; }
   .our-projects .our-projects-title {
