@@ -1,6 +1,17 @@
 export default class Gmap {
   constructor(el) {
-    this.el = el;
+    this.el = document.getElementById(this.el);
+    if (this.el == null) {
+      return false;
+    }
+    this.init();
+
+
+
+    this.init();
+  }
+
+  init() {
 
     window.initMap = () =>{
       let uluru = {lat: -25.363, lng: 131.044};
@@ -14,19 +25,10 @@ export default class Gmap {
       });
     }
 
-    this.init();
-  }
-
-  init() {
-
-    let element = document.getElementById(this.el);
-
-    if (element != null){
-      let js = document.createElement('script');
-      js.type = 'text/javascript';
-      js.async = true;
-      js.src = "https://maps.googleapis.com/maps/api/js?key=AIzaSyBRUxm8llw8uuQ2jNjSWlnQKtBIJRG2rMo&callback=initMap";
-      document.head.appendChild(js);
-    }
+    let js = document.createElement('script');
+    js.type = 'text/javascript';
+    js.async = true;
+    js.src = "https://maps.googleapis.com/maps/api/js?key=AIzaSyBRUxm8llw8uuQ2jNjSWlnQKtBIJRG2rMo&callback=initMap";
+    document.head.appendChild(js);
   }
 }

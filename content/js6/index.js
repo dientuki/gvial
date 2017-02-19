@@ -1,3 +1,4 @@
+import Sticky from './modules/Sticky';
 import Gmap from './modules/Gmap';
 import reCaptcha from './modules/reCaptcha';
 import SendForm from './modules/SendForm';
@@ -8,6 +9,7 @@ new Navigation();
 new SendForm('#contact-form');
 new reCaptcha('recaptcha');
 new Gmap('map');
+new Sticky({el:'#primary-navigation'});
 
 let myLazyLoad = new LazyLoad({
   // example of options object -> see options section

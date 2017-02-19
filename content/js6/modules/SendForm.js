@@ -3,6 +3,9 @@ import Axios from 'axios';
 export default class SendForm {
   constructor(form) {
     this.form = document.querySelector(form);
+    if (this.form == null) {
+      return false;
+    }
     this.data = [];
     this.form.addEventListener('submit', (e) => {
       e.preventDefault();

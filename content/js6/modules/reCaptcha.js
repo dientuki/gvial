@@ -1,6 +1,13 @@
 export default class reCaptcha {
   constructor(el) {
-    this.el = el;
+    this.el = document.getElementById(this.el);
+    if (this.el == null) {
+      return false;
+    }
+    this.init();
+  }
+
+  init() {
 
     window.onloadCallback = () =>{
       grecaptcha.render(this.el, {
@@ -8,19 +15,10 @@ export default class reCaptcha {
       });
     }
 
-    this.init();
-  }
-
-  init() {
-
-    let element = document.getElementById(this.el);
-
-    if (element != null){
-      let js = document.createElement('script');
-      js.type = 'text/javascript';
-      js.async = true;
-      js.src = "https://www.google.com/recaptcha/api.js?onload=onloadCallback&render=explicit";
-      document.head.appendChild(js);
-    }
+    let js = document.createElement('script');
+    js.type = 'text/javascript';
+    js.async = true;
+    js.src = "https://www.google.com/recaptcha/api.js?onload=onloadCallback&render=explicit";
+    document.head.appendChild(js);
   }
 }
