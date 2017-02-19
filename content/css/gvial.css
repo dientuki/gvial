@@ -1793,9 +1793,9 @@ body.is-menu-opened #primary-navigation {
       left: -6.25em; } }
 
 @media screen and (max-width: 60.62em) {
-  .block [class*="col-"] {
+  .block [class$="-12"] {
     margin-top: 1em; }
-    .block [class*="col-"]:first-of-type {
+    .block [class$="-12"]:first-of-type {
       margin-top: 0; }
   .main-wrapper {
     width: 46.88rem; }
@@ -1811,9 +1811,9 @@ body.is-menu-opened #primary-navigation {
     padding-left: 1em;
     padding-right: 1em;
     width: auto; }
-    .block [class*="col-"] {
+    .block [class$="-12"] {
       margin-top: 1em; }
-      .block [class*="col-"]:first-of-type {
+      .block [class$="-12"]:first-of-type {
         margin-top: 0; }
   .contact-form fieldset [class*="col-"] {
     padding-bottom: 0; }

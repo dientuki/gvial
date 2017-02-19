@@ -5,7 +5,7 @@
 @media #{$gl-sm}{
 
   .block {
-    [class*="col-"]{
+    [class$="-12"]{
       margin-top: (16em/$fs);
 
       &:first-of-type {
