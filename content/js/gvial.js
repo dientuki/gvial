@@ -1977,30 +1977,5 @@ let myLazyLoad = new __WEBPACK_IMPORTED_MODULE_3_vanilla_lazyload___default.a({
   data_srcset: "original-set"
 });
 
-/*
-
-function initMap() {
-  let uluru = {lat: -25.363, lng: 131.044};
-  let map = new google.maps.Map(document.getElementById('map'), {
-    zoom: 4,
-    center: uluru
-  });
-  let marker = new google.maps.Marker({
-    position: uluru,
-    map: map
-  });
-}
-
-if (body.classList.contains('hasMap')){
-  js = document.createElement('script');
-  js.type = 'text/javascript';
-  js.async = true;
-  js.src = "https://maps.googleapis.com/maps/api/js?key=AIzaSyBRUxm8llw8uuQ2jNjSWlnQKtBIJRG2rMo&callback=initMap";
-  document.head.appendChild(js);
-}
-
-*/
-
-
 /***/ })
 /******/ ]);

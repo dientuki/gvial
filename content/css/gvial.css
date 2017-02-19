@@ -1428,6 +1428,28 @@ body {
     .block .block-title strong {
       font-family: 'Roboto Bold';
       font-weight: bold; }
+  .block .block-subtitle {
+    font-family: 'Roboto Bold';
+    font-weight: bold;
+    color: black;
+    text-transform: uppercase; }
+  .block .block-bigsubtitle {
+    text-transform: uppercase;
+    font-size: 2em;
+    line-height: 1em; }
+    .block .block-bigsubtitle small {
+      font-style: 1em;
+      text-transform: none; }
+  .block .break-line {
+    display: block; }
+  .block .block-content {
+    margin: 2em 0 0 1em; }
+    .block .block-content .block-subtitle,
+    .block .block-content .block-bigsubtitle {
+      margin-top: 1.5rem; }
+      .block .block-content .block-subtitle:first-child,
+      .block .block-content .block-bigsubtitle:first-child {
+        margin-top: 0; }
   .block .block-img-bg {
     position: absolute;
     left: 50%;

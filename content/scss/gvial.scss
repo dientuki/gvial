@@ -75,6 +75,45 @@ body {
     }
   }
 
+  .block-subtitle {
+    font-family: 'Roboto Bold';
+    font-weight: bold;
+    color:black;
+    text-transform: uppercase;
+  }
+
+  .block-bigsubtitle {
+    $tfs:32;
+    text-transform: uppercase;
+    font-size: #{$tfs/$fs}em;
+    line-height: 1em;
+
+
+    small {
+      font-style: 1em;
+      text-transform: none;
+    }
+  }
+
+  .break-line {
+    display: block;
+  }
+
+
+
+  .block-content {
+    margin: (32em/$fs) 0 0 (16em/$fs);
+
+    .block-subtitle,
+    .block-bigsubtitle {
+      margin-top: (24rem/$fs);
+
+      &:first-child {
+        margin-top: 0;
+      }
+    }
+  }
+
   .block-img-bg {
     position: absolute;
     left: 50%;
