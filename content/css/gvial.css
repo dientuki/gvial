@@ -1404,17 +1404,22 @@ body {
   position: relative;
   height: 100%; }
 
-.aspect-16-9 {
-  padding-bottom: 56.25%;
+[class*="aspect-"] {
   height: 0;
   position: relative;
   width: 100%; }
-  .aspect-16-9 img {
+  [class*="aspect-"] img {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%; }
+
+.aspect-16-9 {
+  padding-bottom: 56.25%; }
+
+.aspect-1-1 {
+  padding-bottom: 100%; }
 
 .block {
   margin-top: 2.5em;
@@ -1579,6 +1584,10 @@ body {
 
 .products-services .p-s-horizontal figcaption strong {
   display: inline; }
+
+.products-services .products-services-bg {
+  height: 33.5em;
+  position: relative; }
 
 .our-projects {
   height: 29.12em; }
