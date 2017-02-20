@@ -11,6 +11,8 @@
 
 passthrough '/images/content/**/*'
 passthrough '/images/customers/**/*'
+passthrough '/sendform.php'
+passthrough '/.env'
 
 ignore '/js/**/*'
 ignore '/js6/**/*'

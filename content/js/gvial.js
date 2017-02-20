@@ -1032,12 +1032,16 @@ class SendForm {
     if (this.form == null) {
       return false;
     }
-    this.data = [];
+    this.data = new URLSearchParams();
     this.form.addEventListener('submit', (e) => {
       e.preventDefault();
 
       for (let element of this.form.elements){
-        this.data[element.name] = element.value;
+        //this.data[element.name] = element.value;
+        if (element.value != ""){
+          this.data.append(element.name, element.value)
+        }
+
       }
 
       this.onSubmit();
@@ -1045,6 +1049,14 @@ class SendForm {
   }
 
   onSubmit() {
+    __WEBPACK_IMPORTED_MODULE_0_axios___default()({ method: 'post',
+      url: 'sendform.php',
+      data: this.data
+    }).then(function (response) {
+      console.log(response);
+    });
+
+    return;
 
     let url = 'https://www.google.com/recaptcha/api/siteverify?secret=6LcA_xUUAAAAAFrAa_54CsV4Pu2d7RK6l8yIS2sD&response=' + document.querySelector('#g-recaptcha-response').value
 
