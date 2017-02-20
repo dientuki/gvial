@@ -1621,14 +1621,22 @@ body {
 .factors .factors-img {
   width: 100%; }
 
-.contact-form .form-text,
-.contact-form .form-textarea {
-  width: 100%;
-  box-sizing: border-box; }
-
-.contact-form label {
-  display: none;
-  visibility: hidden; }
+.contact-form {
+  position: relative; }
+  .contact-form .form-text,
+  .contact-form .form-textarea {
+    width: 100%;
+    box-sizing: border-box; }
+  .contact-form label {
+    display: none;
+    visibility: hidden; }
+  .contact-form .loading {
+    background: rgba(255, 255, 255, 0.7) url(../images/rolling.svg) no-repeat center center;
+    background-size: 4%;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 8; }
 
 .our-company {
   background: #D9E3EA;

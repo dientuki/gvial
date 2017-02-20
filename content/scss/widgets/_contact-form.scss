@@ -1,14 +1,25 @@
 @import "../_vars";
 
 .contact-form {
+  position: relative;
+
   .form-text,
   .form-textarea {
     width: 100%;
     box-sizing: border-box;
   }
 
-  label {
+  label{
     display:none;
     visibility: hidden;
+  }
+
+  .loading {
+    background: rgba(white,.70) url(../images/rolling.svg) no-repeat center center;
+    background-size: 4%;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 8;
   }
 }

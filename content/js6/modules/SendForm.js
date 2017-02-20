@@ -7,15 +7,14 @@ export default class SendForm {
       return false;
     }
     this.data = new URLSearchParams();
+    this.action = this.form.getAttribute('action');
     this.form.addEventListener('submit', (e) => {
       e.preventDefault();
 
       for (let element of this.form.elements){
-        //this.data[element.name] = element.value;
         if (element.value != ""){
           this.data.append(element.name, element.value)
         }
-
       }
 
       this.onSubmit();
@@ -23,14 +22,16 @@ export default class SendForm {
   }
 
   onSubmit() {
-    Axios({ method: 'post',
-      url: 'sendform.php',
+
+    Axios({
+      method: 'post',
+      url: this.action,
       data: this.data
     }).then(function (response) {
       console.log(response);
+    }).catch(function (error) {
+      console.log(error);
     });
-
-    return;
 
     let url = 'https://www.google.com/recaptcha/api/siteverify?secret=6LcA_xUUAAAAAFrAa_54CsV4Pu2d7RK6l8yIS2sD&response=' + document.querySelector('#g-recaptcha-response').value
 
@@ -43,7 +44,11 @@ export default class SendForm {
           Axios({ method: 'post',
             url: 'sendform.php',
             data: this.data
-          })
+          }).then(function (response) {
+            console.log(response);
+          }).catch(function (error) {
+            console.log(error);
+          });
         }
       });
   }
