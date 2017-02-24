@@ -1,7 +1,29 @@
 ﻿:ruby
   customers = Array.new
 
-  customers << {:title => "Capacidad", :w=> '#', :h=> '#'}
+  customers << {:title => "Alcaldía Mayor de Bogota D.C", :w=> 133, :h=> 124, :image=> relative_path_to("/images/customers/alcaldia-mayor-bogota.jpg")}
+  customers << {:title => "Alcaldía de Medellín", :w=>136 , :h=>131 , :image=> relative_path_to("/images/customers/alcaldia-medellin.jpg")}
+  customers << {:title => "Alcaldía de Pasto", :w=> 146, :h=>129, :image=> relative_path_to("/images/customers/alcaldia-pasto.jpg")}
+  customers << {:title => "Alcaldía de Ibagué", :w=>121 , :h=>138, :image=> relative_path_to("/images/customers/alcaldia-ibague.jpg")}
+  customers << {:title => "Invias", :w=> 98, :h=> 138, :image=> relative_path_to("/images/customers/invias.jpg")}
+  customers << {:title => "Gobernación de Antioquia", :w=> 140, :h=> 136, :image=> relative_path_to("/images/customers/gobernacion-antioquia.jpg")}
+  customers << {:title => "Fontur Colombia", :w=> 284, :h=> 60, :image=> relative_path_to("/images/customers/fontur.jpg")}
+  customers << {:title => "Cass Constructores", :w=>127 , :h=>130 , :image=> relative_path_to("/images/customers/cass.jpg")}
+  customers << {:title => "Concesión Autopista Botgotá-Girardot", :w=> 138, :h=> 133, :image=> relative_path_to("/images/customers/bogota-girardot.jpg")}
+  customers << {:title => "Concesión La Mesa de los Santos", :w=>126 , :h=> 115, :image=> relative_path_to("/images/customers/concesion-mesa-santos.jpg")}
+  customers << {:title => "Autopista Bogotá-Villeta", :w=>156 , :h=> 139, :image=> relative_path_to("/images/customers/bogota-villeta.jpg")}
+  customers << {:title => "Concesionaria Panamericana", :w=> 184, :h=> 123, :image=> relative_path_to("/images/customers/concesionaria-panamericana.jpg")}
+  customers << {:title => "Coviandes", :w=> 145, :h=> 79, :image=> relative_path_to("/images/customers/coviandes.jpg")}
+  customers << {:title => "Devisab", :w=> 117, :h=> 139, :image=> relative_path_to("/images/customers/devisab.jpg")}
+  customers << {:title => "Devinar", :w=> 225, :h=> 89, :image=> relative_path_to("/images/customers/devinar.jpg")}
+  customers << {:title => "Devinorte", :w=> 286, :h=> 65, :image=> relative_path_to("/images/customers/devinorte.jpg")}
+  customers << {:title => "Ingenieria de Vias S.A", :w=> 289, :h=> 189, :image=> relative_path_to("/images/customers/ingenieria-vias.jpg")}
+  customers << {:title => "Pavimentos Colombia S.A.S", :w=> 177, :h=> 96, :image=> relative_path_to("/images/customers/pavimentos-colombia.jpg")}
+  customers << {:title => "MHC", :w=> 269, :h=>79 , :image=> relative_path_to("/images/customers/mhc.jpg")}
+  customers << {:title => "Fonade", :w=> 123, :h=> 138, :image=> relative_path_to("/images/customers/fonade.jpg")}
+  customers << {:title => "Icein", :w=> 135, :h=> 127, :image=> relative_path_to("/images/customers/icein.jpg")}
+
+  #customers << {:title => "", :w=> , :h=> , :image=> relative_path_to("/images/customers/.jpg")}
 
 %section.block.our-costumers.main-wrapper
   %h1.block-title
@@ -9,8 +31,6 @@
       Nuestros
     clientes
   %ul.our-costumers-list
-    - (1..22).each do |i|
-      - w = rand(108..243)
-      - h = rand(94..187)
+    - customers.each do |customer|
       %li.our-costumers-item
-        %img{:src=>"http://lorempixel.com/#{w}/#{h}/", :width=>w, :height=>h, :title=>"title", :alt=>"alt"}
+        %img.lzl{:width=>customer[:w], :height=>customer[:h], :title=>customer[:title], :alt=>customer[:title], :"data-original"=>customer[:image], :"data-original-set"=>customer[:image], :src=>"data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEHAAEALAAAAAABAAEAAAICTAEAOw=="}

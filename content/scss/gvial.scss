@@ -151,6 +151,10 @@ body {
   justify-content: space-between;
   align-content: space-between;
   height: calc(100% + 50px);
+
+  .our-costumers-item {
+    padding: (18em/$fs) (14em/$fs);
+  }
 }
 
 @import "widgets/_header";

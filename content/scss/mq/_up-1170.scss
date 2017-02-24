@@ -20,6 +20,13 @@
   .main-wrapper {
     width: (970rem/$fs);
   }
+
+  .our-costumers-list {
+
+    .our-costumers-item {
+      padding: (12em/$fs) (18em/$fs);
+    }
+  }
 }
 
 
