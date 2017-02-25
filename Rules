@@ -9,17 +9,15 @@
 #  layout '/default.*'
 #end
 
-passthrough '/images/content/**/*'
-passthrough '/images/customers/**/*'
+passthrough '/images/**/*'
 passthrough '/sendform.php'
 passthrough '/.env'
 
 ignore '/js/**/*'
 ignore '/js6/**/*'
-ignore '/images/**/*'
 ignore '/css/**/*'
 ignore '/scss/**/*'
-ignore '/fonts/**/*'
+passthrough '/fonts/**/*'
 
 compile '/**/*.{haml}' do
   filter :haml, :ugly => true, :attr_wrapper => '"', :format => :html5

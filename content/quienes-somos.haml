@@ -5,7 +5,7 @@ selected: 'index'
 
 :ruby
   img1 = Array.new
-  img1 << relative_path_to("/images/content/senal-vertical-2000.jpg") + " 2000w"
+  img1 << relative_path_to("/images/content/nosotros-2000.jpg") + " 2000w"
 
   img2 = Array.new
   img2 << relative_path_to("/images/content/senal-horizontal-2000.jpg") + " 2000w"
@@ -14,7 +14,7 @@ selected: 'index'
   img3 << relative_path_to("/images/content/defensa-2000.jpg") + " 2000w"
 
   img4 = Array.new
-  img4 << relative_path_to("/images/content/plastic-devices-2000.jpg") + " 2000w"
+  img4 << relative_path_to("/images/customers/marcas-viales.png")
 
 %article.block.main-wrapper
   %h1.block-title
@@ -24,7 +24,8 @@ selected: 'index'
   .grid-noBottom
     .grid.col-8_sm-12
       .col-12
-        %img
+        .aspect-20-9
+          %img.lzl{:"data-original"=>img1[0].partition(" ").first ,:"data-original-set"=>img1.join(","), :src=>"data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEHAAEALAAAAAABAAEAAAICTAEAOw=="}
       .col-6_sm-12
         %p Somos una empresa Colombiana,  especializada en Señalización y Seguridad Vial; contamos con un importante respaldo internacional y amplia trayectoria en el diseño, planeación,  ejecución y control de destacados proyectos tanto a nivel urbano como  rural a lo largo de todo el territorio nacional.  G-Vial,  entendemos claramente la enorme responsabilidad que representa la Señalización como factor determinante e imprescindible en la Seguridad  vial y  la protección de los actores de una vía;  es por ello que invertimos de forma constante el profesionalismo, la rigurosidad téni
         %p Somos una empresa Colombiana,  especializada en Señalización y Seguridad Vial; contamos con un importante respaldo internacional y amplia trayectoria en el diseño, planeación,  ejecución y control de destacados proyectos tanto a nivel urbano como  rural a lo largo de todo el territorio nacional.  G-Vial,  entendemos claramente la enorme responsabilidad que representa la Señalización como factor determinante e imprescindible en la Seguridad  vial y  la protección de los actores de una vía;  es por ello que invertimos de forma constante el profesionalismo, la rigurosidad téni
@@ -44,7 +45,7 @@ selected: 'index'
     %article.col-4_xs-12
       %figure
         .aspect-11-8
-          %img.lzl{:srcset=>img4.join(",")}
+          %img.lzl.center{:srcset=>img4.join(",")}
         %figcaption
           %p Somos una empresa Colombiana,  especializada en Señalización y Seguridad Vial; contamos con un importante
           %a{:href=>"#"} www.google.com
@@ -69,7 +70,7 @@ selected: 'index'
     %article.col-4_xs-12
       %figure
         .aspect-11-8
-          %img.lzl{:srcset=>img4.join(",")}
+          %img.lzl.center{:srcset=>img4.join(",")}
         %figcaption
           %p Somos una empresa Colombiana,  especializada en Señalización y Seguridad Vial; contamos con un importante
           %a{:href=>"#"} www.google.com
@@ -81,7 +82,7 @@ selected: 'index'
     %article.col-4_xs-12
       %figure
         .aspect-11-8
-          %img.lzl{:srcset=>img4.join(",")}
+          %img.lzl.center{:srcset=>img4.join(",")}
         %figcaption
           %p Somos una empresa Colombiana,  especializada en Señalización y Seguridad Vial; contamos con un importante
           %a{:href=>"#"} www.google.com

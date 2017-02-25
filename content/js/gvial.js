@@ -931,14 +931,11 @@ process.umask = function() { return 0; };
 "use strict";
 class Gmap {
   constructor(el) {
-    this.el = document.getElementById(this.el);
+
+    this.el = document.getElementById(el);
     if (this.el == null) {
       return false;
     }
-    this.init();
-
-
-
     this.init();
   }
 
@@ -946,7 +943,7 @@ class Gmap {
 
     window.initMap = () =>{
       let uluru = {lat: -25.363, lng: 131.044};
-      let map = new google.maps.Map(document.getElementById(this.el), {
+      let map = new google.maps.Map(this.el, {
         zoom: 4,
         center: uluru
       });

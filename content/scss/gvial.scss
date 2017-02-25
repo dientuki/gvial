@@ -53,14 +53,27 @@ body {
     width: 100%;
     height: 100%;
   }
+
+  .center {
+    width: auto;
+    height: auto;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+  }
 }
 
 .aspect-16-9 {
   padding-bottom: (9%/16*100);
 }
 
+.aspect-20-9 {
+  padding-bottom: (9%/20*100);
+}
+
 .aspect-11-8 {
   padding-bottom: (8%/11*100);
+  background: radial-gradient(ellipse at center, rgba(255,255,255,1) 66%,rgba(148,148,148,1) 100%);
 }
 
 
