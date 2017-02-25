@@ -93,7 +93,8 @@ body {
     line-height: 1em;
     margin-bottom: (25em/$tfs);
 
-    strong {
+    strong,
+    &.strong {
       font-family: 'Roboto Bold';
       font-weight: bold;
     }

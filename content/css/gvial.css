@@ -1443,7 +1443,7 @@ body {
     text-transform: uppercase;
     line-height: 1em;
     margin-bottom: 0.46em; }
-    .block .block-title strong {
+    .block .block-title strong, .block .block-title.strong {
       font-family: 'Roboto Bold';
       font-weight: bold; }
   .block .block-subtitle {
@@ -1660,6 +1660,45 @@ body {
   top: 50%;
   transform: translateY(-50%);
   text-shadow: 0.01em 0.01em 0.03em rgba(0, 0, 0, 0.5), -0.01em -0.01em 0.03em rgba(0, 0, 0, 0.5); }
+
+.allies-img {
+  margin-bottom: 1.5em; }
+  .allies-img .allies-caption {
+    text-align: center;
+    font-size: 0.94em;
+    background: #252525;
+    color: white;
+    padding: 1em 1.33em 0.47em; }
+  .allies-img .allies-link {
+    font-size: 1.13em;
+    color: white;
+    display: inline-block;
+    margin-top: 0.59em;
+    text-decoration: none;
+    font-family: "Roboto Bold"; }
+
+.counter {
+  counter-reset: counter; }
+  .counter .counter-item {
+    position: relative;
+    padding-left: 3.62em;
+    margin-top: 1.88em; }
+    .counter .counter-item:first-of-type {
+      margin-top: 0; }
+    .counter .counter-item:before {
+      font-family: "Roboto Bold";
+      font-size: 2em;
+      content: counter(counter);
+      counter-increment: counter;
+      height: 1.25em;
+      line-height: 1.25em;
+      width: 1.25em;
+      background: #005796;
+      text-align: center;
+      color: white;
+      position: absolute;
+      top: 0;
+      left: 0; }
 
 #map {
   height: 29.12em; }

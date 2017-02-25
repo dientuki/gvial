@@ -16,6 +16,63 @@
   }
 }
 
+.allies-img {
+  $tfs:15;
+
+  margin-bottom: (24em/$fs);
+
+  .allies-caption {
+    text-align: center;
+    font-size: #{$tfs/$fs}em;
+    background: #252525;
+    color:white;
+    padding: (15em/$tfs) (20em/$tfs) (7em/$tfs);
+  }
+
+  .allies-link {
+    $lfs:17;
+    font-size: #{$lfs/$tfs}em;
+    color:white;
+    display: inline-block;
+    margin-top: (10em/$lfs);
+    text-decoration: none;
+    font-family: "Roboto Bold";
+  }
+}
+
+.counter {
+  counter-reset: counter;
+
+
+  .counter-item {
+    position: relative;
+    padding-left: (58em/$fs);
+    margin-top: (30em/$fs);
+
+    &:first-of-type {
+      margin-top: 0;
+    }
+
+    &:before {
+      $tfs:32;
+      font-family: "Roboto Bold";
+      font-size: #{$tfs/$fs}em;
+      content: counter(counter);
+      counter-increment: counter;
+      height: (40em/$tfs);
+      line-height: (40em/$tfs);
+      width: (40em/$tfs);
+      background: #005796;
+      text-align: center;
+      color:white;
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+
+  }
+}
+
 #map {
   height: (466em/$fs);
 }
