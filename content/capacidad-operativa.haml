@@ -5,5 +5,47 @@ description: "Especialistas en señalizacion y seguridad vial con equipos de ult
 keywords: "señalizacion vial,señales de transito,Tachas reflectivas, Estoperoles, reductores de velocidad,Termoplastico,vialine ac3, aqualine, aerocril,plastigum, plastivial, Marcaline, Raiseline, tecnoline, Trackline, trackbike, mantenimiento vial"
 ---
 
+:ruby
+  img = Array.new
+  img << relative_path_to("/images/content/solidez-750.jpg") + " 750w"
+  img << relative_path_to("/images/content/solidez-970.jpg") + " 970w"
+  img << relative_path_to("/images/content/solidez-1170.jpg") + " 1170w"
+  img << relative_path_to("/images/content/solidez-2000.jpg") + " 2000w"
 
-= render '/widgets/solidity.haml'
+%article.block.block-no-top
+  %img.lzl.block-img-bg{:"data-original"=>img[0].partition(" ").first ,:"data-original-set"=>img.join(","), :src=>"data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEHAAEALAAAAAABAAEAAAICTAEAOw=="}
+  .main-wrapper
+    .solidity-content
+      %h1.solidity-title Equipos de alto rendimiento
+  .main-wrapper.grid-column
+    %h1.col-12
+      %strong
+        Capacidad
+      Operativa
+    %ul.grid.dot.col-12
+      %li.col-6.dot-item
+      %li.col-6.dot-item
+      %li.col-6.dot-item
+      %li.col-6.dot-item
+      %li.col-6.dot-item
+      %li.col-6.dot-item
+      %li.col-6.dot-item
+    .col-12
+      %h3.block-subtitle Vialine
+      %p
+        Somos una empresa Colombiana,  especializada en Señalización y Seguridad Vial; contamos con un importante respaldo internacional y amplia trayectoria en el diseño, planeación,  ejecución y control de destacados proyectos tanto a nivel urbano como  rural a lo largo de todo el territorio nacional.  En G-Vial,  entendemos claramente la enorme responsabilidad que representa la Señalización como factor determinante e imprescindible en la Seguridad  vial y  la protección de los actores de una vía;  es por ello que invertimos de forma constante el profesionalismo, la rigurosidad técni
+    .col-12.grid
+      .col-6
+        .aspect-1-1
+      .col-6
+        .aspect-1-1
+    .col-12.grid
+      .col-6
+        .aspect-1-1
+      .col-6
+        .aspect-1-1
+    .col-12.grid
+      .col-6
+        .aspect-1-1
+      .col-6
+        .aspect-1-1
