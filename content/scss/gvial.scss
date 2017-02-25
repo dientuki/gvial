@@ -76,9 +76,12 @@ body {
   background: radial-gradient(ellipse at center, rgba(255,255,255,1) 66%,rgba(148,148,148,1) 100%);
 }
 
-
 .aspect-1-1 {
   padding-bottom: 100%;
+}
+
+.aspect-1-2 {
+  padding-bottom: (2%/1*100);
 }
 
 .block {
@@ -127,7 +130,7 @@ body {
 
 
   .block-content {
-    margin: (32em/$fs) 0 0 (16em/$fs);
+    margin: 0 0 0 (16em/$fs);
 
     .block-subtitle,
     .block-bigsubtitle {

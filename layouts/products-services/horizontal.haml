@@ -11,6 +11,9 @@
   img2 << relative_path_to("/images/content/pintura-alto-desempenio-1170.jpg") + " 1170w"
   img2 << relative_path_to("/images/content/pintura-alto-desempenio-2000.jpg") + " 2000w"
 
+  img4 = Array.new
+  img4 << relative_path_to("/images/content/pintura-convencional-vertical-2000.jpg") + " 2000w"
+
 %section.block.products-services.main-wrapper
   %h1.block-title
     %strong
@@ -20,13 +23,14 @@
     .col-6_sm-12
       %figure.products-services
         .aspect-16-9
-          %img.lzl.products-services-img{:srcset=>img1.join(",")}
+          %img.lzl.products-services-img{:"data-original"=>img1[0].partition(" ").first ,:"data-original-set"=>img1.join(","), :src=>"data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEHAAEALAAAAAABAAEAAAICTAEAOw=="}
         %figcaption
           %strong
             Pinturas
           convecionales
-      .grid
-        .col-8
+
+      .grid.fix-margin-top
+        .col-8_md-9
           .block-content
             %h3.block-subtitle Vialine
             %p Pintura Acrílica modificada BASE SOLVENTE para ciudad, carreteras, vías interurbanas y municipales.  Presenta espesor seco máximo de 11 MILS. Pintura Acrílica modificada BASE SOLVENTE para ciudad, carreteras, vías interurbanas y municipales.  Presenta espesor seco máximo de 11 MILS.
@@ -36,17 +40,22 @@
               %span.break-line Microesfera
               de vidrio:
             %p Entendiendo la demarcación vial como UN SISTEMA que integra varios elementos para prestar el mejor desempeño tanto en el día como en la noche,  las aplicaciones deben integrar microesferas de vidrio que generan retroreflectividad  y permiten la visibilidad de la demarcacion sin presencia de luz natural.  G-Vial utiliza microesferas de alto rendimiento que han sido probadas y homologadas con los productos Marcas Viales y ofrecen referencias especializadas en cada uno de los tipos de pintura. ofrecen referencias especializadas en cada uno de los tipos de pintura.
-        .col-4
+        .col-4_md-3
+          .aspect-1-2
+            %img.lzl{:"data-original"=>img4[0].partition(" ").first ,:"data-original-set"=>img4.join(","), :src=>"data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEHAAEALAAAAAABAAEAAAICTAEAOw=="}
+          .aspect-1-2
+            %img.lzl.hide-me{:"data-original"=>img4[0].partition(" ").first ,:"data-original-set"=>img4.join(","), :src=>"data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEHAAEALAAAAAABAAEAAAICTAEAOw=="}
 
     .col-6_sm-12
       %figure.products-services
         .aspect-16-9
-          %img.lzl.products-services-img{:srcset=>img2.join(",")}
+          %img.lzl.products-services-img{:"data-original"=>img2[0].partition(" ").first ,:"data-original-set"=>img2.join(","), :src=>"data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEHAAEALAAAAAABAAEAAAICTAEAOw=="}
         %figcaption
           %strong Pinturas
           alto desempeño
-      .grid
-        .col-8
+
+      .grid.fix-margin-top
+        .col-8_md-9
           .block-content
             %h2.block-bigsubtitle Termoplástico
             %h3.block-subtitle Extruline
@@ -63,4 +72,8 @@
 
             %h3.block-subtitle Plastivial
             %p Pintura de alta durabilidad de dos componentes de aplicación Manual para la elaboración de pasos peatonales, símbolos y flechas. Catalizada por peróxido orgánico.  Presenta espesor seco máximo de 60 MILS.
-        .col-4
+        .col-4_md-3
+          .aspect-1-2
+            %img.lzl{:"data-original"=>img4[0].partition(" ").first ,:"data-original-set"=>img4.join(","), :src=>"data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEHAAEALAAAAAABAAEAAAICTAEAOw=="}
+          .aspect-1-2
+            %img.lzl.hide-me{:"data-original"=>img4[0].partition(" ").first ,:"data-original-set"=>img4.join(","), :src=>"data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEHAAEALAAAAAABAAEAAAICTAEAOw=="}

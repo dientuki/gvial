@@ -1434,6 +1434,9 @@ body {
 .aspect-1-1 {
   padding-bottom: 100%; }
 
+.aspect-1-2 {
+  padding-bottom: 200%; }
+
 .block {
   margin-top: 2.5em;
   position: relative; }
@@ -1461,7 +1464,7 @@ body {
   .block .break-line {
     display: block; }
   .block .block-content {
-    margin: 2em 0 0 1em; }
+    margin: 0 0 0 1em; }
     .block .block-content .block-subtitle,
     .block .block-content .block-bigsubtitle {
       margin-top: 1.5rem; }
@@ -1606,6 +1609,9 @@ body {
 
 .products-services .products-services-images {
   margin-top: 2.5em; }
+
+.products-services .fix-margin-top {
+  margin-top: 2em; }
 
 .our-projects {
   height: 29.12em; }
@@ -1865,7 +1871,10 @@ body {
   #primary-navigation .menu-item:first-child {
     margin-left: 4.38em; }
   .our-costumers-list .our-costumers-item {
-    padding: 1.56em 1.25em; } }
+    padding: 1.56em 1.25em; }
+  .products-services .hide-me {
+    display: none;
+    visibility: hidden; } }
 
 @media screen and (max-width: 46.87em) {
   .main-wrapper {

@@ -34,4 +34,11 @@
       padding: (25em/$fs) (20em/$fs);
     }
   }
+
+  .products-services {
+    .hide-me {
+      display: none;
+      visibility: hidden;
+    }
+  }
 }
