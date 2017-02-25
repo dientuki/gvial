@@ -93,9 +93,27 @@
     display: table-cell;
     vertical-align: middle;
 
+    will-change: background, color;
+
+    transition: {
+      property: background, color;
+      duration: 200ms;
+      timing-function: ease;
+      delay: 0;
+    }
+
     span {
       display: block;
       line-height: 1em;
     }
+
+
+  }
+
+  .selected,
+  .menu-link:hover{
+    background: #222533;
+    color:white;
+
   }
 }

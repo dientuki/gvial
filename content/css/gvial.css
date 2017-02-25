@@ -1562,10 +1562,19 @@ body {
     color: #464646;
     padding: 0 0.56em;
     display: table-cell;
-    vertical-align: middle; }
+    vertical-align: middle;
+    will-change: background, color;
+    transition-property: background, color;
+    transition-duration: 200ms;
+    transition-timing-function: ease;
+    transition-delay: 0; }
     #primary-navigation .menu-link span {
       display: block;
       line-height: 1em; }
+  #primary-navigation .selected,
+  #primary-navigation .menu-link:hover {
+    background: #222533;
+    color: white; }
 
 .solidity {
   position: relative;
