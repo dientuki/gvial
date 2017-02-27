@@ -4,7 +4,7 @@
 
   .factors-list-item {
     line-height: (50em/$fs);
-    background: #005796;
+    background: $blueBG;;
     margin-top: (15em/$fs);
 
     &:first-of-type {

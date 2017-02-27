@@ -67,6 +67,14 @@ body {
   padding-bottom: (9%/16*100);
 }
 
+.aspect-16-12 {
+  padding-bottom: (12%/16*100);
+}
+
+.aspect-19-11 {
+  padding-bottom: (11%/19*100);
+}
+
 .aspect-20-9 {
   padding-bottom: (9%/20*100);
 }
@@ -74,6 +82,14 @@ body {
 .aspect-11-8 {
   padding-bottom: (8%/11*100);
   background: radial-gradient(ellipse at center, rgba(255,255,255,1) 66%,rgba(148,148,148,1) 100%);
+}
+
+.aspect-764-427 {
+  padding-bottom: (427%/764*100);
+}
+
+.aspect-374-427 {
+  padding-bottom: (427%/374*100);
 }
 
 .aspect-1-1 {
@@ -89,12 +105,11 @@ body {
   position: relative;
 
   .block-title {
-    $tfs:54;
-    font-size: #{$tfs/$fs}em;
+    font-size: #{$fsBlockTitle/$fs}em;
     color:#464646;
     text-transform: uppercase;
     line-height: 1em;
-    margin-bottom: (25em/$tfs);
+    margin-bottom: (25em/$fsBlockTitle);
 
     strong,
     &.strong {
@@ -179,6 +194,7 @@ body {
 @import "widgets/_products-services";
 @import "widgets/_factors";
 @import "widgets/_contact-form";
+@import "widgets/_capacity";
 @import "widgets/_small-shit";
 
 @import "widgets/_main-icon";

@@ -62,9 +62,29 @@
       height: (40em/$tfs);
       line-height: (40em/$tfs);
       width: (40em/$tfs);
-      background: #005796;
+      background: $blueBG;;
       text-align: center;
       color:white;
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+
+  }
+}
+
+.dot {
+  .dot-item {
+    position: relative;
+    padding-left: (58rem/$fs);
+    min-height:(40rem/$fs) ;
+    padding-bottom: 0;
+
+    &:before {
+      content: "";
+      height: (40rem/$fs);
+      width: (40rem/$fs);
+      background: $blueBG;;
       position: absolute;
       top: 0;
       left: 0;

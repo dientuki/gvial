@@ -1,0 +1,60 @@
+@import "../_vars";
+
+.capacity {
+  .capacity-deco {
+    height: (625em/$fs);
+    position: relative;
+  }
+
+  .capacity-bg-content,
+  .capacity-title,
+  .capacity-bg-title{
+    background: $blueBG;
+    color: white;
+  }
+
+  .capacity-bg-content {
+    z-index: 1;
+    position: absolute;
+    bottom:1em;
+    left: 0;
+    padding: (15em/$fs) (20em/$fs);
+    box-sizing: border-box;
+    width: (420em/$fs);
+  }
+
+  .capacity-bg-title {
+    $tfs:40;
+    font-size: #{$tfs/$fs}em;
+    text-transform: uppercase;
+    font-family: "Roboto Bold";
+    font-weight: bold;
+    line-height: 1em;
+    width: (285em/$tfs);
+  }
+
+  .capacity-title {
+    height: auto;
+    min-height: (86em/$fsBlockTitle);
+    padding-top: (16em/$fsBlockTitle);
+  }
+
+  .capacity-list {
+    $tfs:19;
+    font-size: #{$tfs/$fs}em;
+    font-family: 'Roboto Bold';
+
+    .capacity-list-item {
+      line-height: (20em/$tfs);
+      margin-top: (10em/$tfs);
+
+      &:nth-child(-n+2) {
+        margin-top: 0;
+      }
+    }
+  }
+
+  .capacity-text {
+    margin-top: (16em/$fs);
+  }
+}

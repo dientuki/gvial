@@ -2,6 +2,21 @@
 @import "../_gridlex-vars";
 
 @media #{$gl-xs}{
+  .capacity {
+    .capacity-list {
+      $tfs:19;
+
+      .capacity-list-item {
+        margin-top: (10em/$tfs) !important;
+
+        &:first-child {
+          margin-top: 0 !important;
+        }
+      }
+    }
+  }
+
+
   .main-wrapper {
     width: 100%;
   }
@@ -134,6 +149,18 @@
 
     .our-costumers-item {
       padding: (5em/$fs);
+    }
+  }
+}
+
+
+@media screen and (max-width: (601em/$fs)){ //601
+  .capacity-images {
+    [class*="col-"] {
+      flex-basis: 100%;
+      max-width: 100%;
+      padding-left: 0;
+      padding-right: 0;
     }
   }
 }

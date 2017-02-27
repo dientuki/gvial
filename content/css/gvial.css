@@ -1424,12 +1424,24 @@ body {
 .aspect-16-9 {
   padding-bottom: 56.25%; }
 
+.aspect-16-12 {
+  padding-bottom: 75%; }
+
+.aspect-19-11 {
+  padding-bottom: 57.89%; }
+
 .aspect-20-9 {
   padding-bottom: 45%; }
 
 .aspect-11-8 {
   padding-bottom: 72.73%;
   background: radial-gradient(ellipse at center, white 66%, #949494 100%); }
+
+.aspect-764-427 {
+  padding-bottom: 55.89%; }
+
+.aspect-374-427 {
+  padding-bottom: 114.17%; }
 
 .aspect-1-1 {
   padding-bottom: 100%; }
@@ -1665,6 +1677,50 @@ body {
     height: 100%;
     z-index: 8; }
 
+.capacity .capacity-deco {
+  height: 39.06em;
+  position: relative; }
+
+.capacity .capacity-bg-content,
+.capacity .capacity-title,
+.capacity .capacity-bg-title {
+  background: #005796;
+  color: white; }
+
+.capacity .capacity-bg-content {
+  z-index: 1;
+  position: absolute;
+  bottom: 1em;
+  left: 0;
+  padding: 0.94em 1.25em;
+  box-sizing: border-box;
+  width: 26.25em; }
+
+.capacity .capacity-bg-title {
+  font-size: 2.5em;
+  text-transform: uppercase;
+  font-family: "Roboto Bold";
+  font-weight: bold;
+  line-height: 1em;
+  width: 7.12em; }
+
+.capacity .capacity-title {
+  height: auto;
+  min-height: 1.59em;
+  padding-top: 0.3em; }
+
+.capacity .capacity-list {
+  font-size: 1.19em;
+  font-family: 'Roboto Bold'; }
+  .capacity .capacity-list .capacity-list-item {
+    line-height: 1.05em;
+    margin-top: 0.53em; }
+    .capacity .capacity-list .capacity-list-item:nth-child(-n+2) {
+      margin-top: 0; }
+
+.capacity .capacity-text {
+  margin-top: 1em; }
+
 .our-company {
   background: #D9E3EA;
   padding: 1em 0 2em 0; }
@@ -1714,6 +1770,20 @@ body {
       position: absolute;
       top: 0;
       left: 0; }
+
+.dot .dot-item {
+  position: relative;
+  padding-left: 3.62rem;
+  min-height: 2.5rem;
+  padding-bottom: 0; }
+  .dot .dot-item:before {
+    content: "";
+    height: 2.5rem;
+    width: 2.5rem;
+    background: #005796;
+    position: absolute;
+    top: 0;
+    left: 0; }
 
 #map {
   height: 29.12em; }
@@ -1886,6 +1956,10 @@ body {
     visibility: hidden; } }
 
 @media screen and (max-width: 46.87em) {
+  .capacity .capacity-list .capacity-list-item {
+    margin-top: 0.53em !important; }
+    .capacity .capacity-list .capacity-list-item:first-child {
+      margin-top: 0 !important; }
   .main-wrapper {
     width: 100%; }
   .block {
@@ -1966,6 +2040,13 @@ body {
       display: inline; }
   .our-costumers-list .our-costumers-item {
     padding: 0.31em; } }
+
+@media screen and (max-width: 37.56em) {
+  .capacity-images [class*="col-"] {
+    flex-basis: 100%;
+    max-width: 100%;
+    padding-left: 0;
+    padding-right: 0; } }
 
 @media screen and (min-width: 46.87em) {
   body.is-sticky #header {
