@@ -1,7 +1,7 @@
 export default class reCaptcha {
   constructor(el) {
-    this.el = document.getElementById(this.el);
-    if (this.el == null) {
+    this.el = el; ;
+    if (document.getElementById(this.el) == null) {
       return false;
     }
     this.init();

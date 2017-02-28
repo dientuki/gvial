@@ -1440,6 +1440,9 @@ body {
 .aspect-764-427 {
   padding-bottom: 55.89%; }
 
+.aspect-775-527 {
+  padding-bottom: 68.98%; }
+
 .aspect-374-427 {
   padding-bottom: 114.17%; }
 
@@ -1483,6 +1486,8 @@ body {
       .block .block-content .block-subtitle:first-child,
       .block .block-content .block-bigsubtitle:first-child {
         margin-top: 0; }
+  .block .block-marging-top {
+    margin-top: 2em; }
   .block .block-img-bg {
     position: absolute;
     left: 50%;
@@ -1614,12 +1619,17 @@ body {
     padding-right: 4.44em; }
 
 .products-services figcaption {
-  min-height: 82px;
+  min-height: 2.56em;
   background: #005796;
   color: white;
-  text-transform: uppercase; }
+  text-transform: uppercase;
+  font-size: 2em;
+  line-height: 1em;
+  padding: 0.5em;
+  box-sizing: border-box; }
   .products-services figcaption strong {
-    display: block; }
+    display: block;
+    font-family: "Roboto Bold"; }
 
 .products-services .p-s-horizontal figcaption strong {
   display: inline; }
@@ -1633,6 +1643,9 @@ body {
 
 .products-services .fix-margin-top {
   margin-top: 2em; }
+
+.products-services .hide-me {
+  margin-top: 1em; }
 
 .our-projects {
   height: 29.12em; }
@@ -1720,6 +1733,26 @@ body {
 
 .capacity .capacity-text {
   margin-top: 1em; }
+
+.xp .xp-text .xp-article-header {
+  background: #d8d8d8;
+  height: 100%;
+  padding: 2em 1em 0;
+  box-sizing: border-box; }
+
+.xp .xp-text .block-subtitle {
+  margin-bottom: 1em; }
+
+.xp .xp-images .xp-article-header {
+  background: #005796;
+  padding: 1em;
+  color: white; }
+
+.xp .xp-images .block-subtitle {
+  color: white; }
+
+.xp .xp-images .col-4 {
+  padding-bottom: 0 !important; }
 
 .our-company {
   background: #D9E3EA;

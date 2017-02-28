@@ -88,6 +88,10 @@ body {
   padding-bottom: (427%/764*100);
 }
 
+.aspect-775-527 {
+  padding-bottom: (527%/764*100);
+}
+
 .aspect-374-427 {
   padding-bottom: (427%/374*100);
 }
@@ -157,6 +161,10 @@ body {
     }
   }
 
+  .block-marging-top {
+    margin-top: 2em;
+  }
+
   .block-img-bg {
     position: absolute;
     left: 50%;
@@ -195,6 +203,7 @@ body {
 @import "widgets/_factors";
 @import "widgets/_contact-form";
 @import "widgets/_capacity";
+@import "widgets/_xp";
 @import "widgets/_small-shit";
 
 @import "widgets/_main-icon";

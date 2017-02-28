@@ -14,7 +14,8 @@ export default class Gmap {
       let uluru = {lat: -25.363, lng: 131.044};
       let map = new google.maps.Map(this.el, {
         zoom: 4,
-        center: uluru
+        center: uluru,
+        scrollwheel: false
       });
       let marker = new google.maps.Marker({
         position: uluru,

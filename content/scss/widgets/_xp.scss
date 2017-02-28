@@ -1,0 +1,35 @@
+@import "../_vars";
+
+.xp {
+
+  .xp-article-header {}
+
+  .xp-text {
+    .xp-article-header {
+      background: #d8d8d8;
+      height: 100%;
+      padding: (32em/$fs) (16em/$fs) 0;
+      box-sizing: border-box;
+    }
+
+    .block-subtitle {
+      margin-bottom: (16em/$fs);
+    }
+  }
+
+  .xp-images {
+    .xp-article-header  {
+      background: $blueBG;
+      padding: (16em/$fs);
+      color:white;
+    }
+
+    .block-subtitle {
+      color:white;
+    }
+
+    .col-4 {
+      padding-bottom: 0 !important;
+    }
+  }
+}

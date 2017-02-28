@@ -2,13 +2,19 @@
 
 .products-services {
   figcaption {
-    min-height: 82px;
+    $tfs:32;
+    min-height: (82em/$tfs);
     background: $blueBG;;
     color:white;
     text-transform: uppercase;
+    font-size: #{$tfs/$fs}em;
+    line-height: 1em;
+    padding: (16em/$tfs);
+    box-sizing: border-box;
 
     strong {
       display: block;
+      font-family: "Roboto Bold";
     }
   }
 
@@ -31,6 +37,10 @@
 
   .fix-margin-top {
     margin-top: (32em/$fs);
+  }
+
+  .hide-me {
+    margin-top: (16em/$fs);
   }
 }
 

@@ -945,7 +945,8 @@ class Gmap {
       let uluru = {lat: -25.363, lng: 131.044};
       let map = new google.maps.Map(this.el, {
         zoom: 4,
-        center: uluru
+        center: uluru,
+        scrollwheel: false
       });
       let marker = new google.maps.Marker({
         position: uluru,
@@ -1144,8 +1145,8 @@ onScroll() {
 "use strict";
 class reCaptcha {
   constructor(el) {
-    this.el = document.getElementById(this.el);
-    if (this.el == null) {
+    this.el = el; ;
+    if (document.getElementById(this.el) == null) {
       return false;
     }
     this.init();
