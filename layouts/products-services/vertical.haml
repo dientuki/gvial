@@ -1,27 +1,24 @@
 ﻿:ruby
   img3 = Array.new
-  img3 << relative_path_to("/images/content/solidez-750.jpg") + " 750w"
-  img3 << relative_path_to("/images/content/solidez-970.jpg") + " 970w"
-  img3 << relative_path_to("/images/content/solidez-1170.jpg") + " 1170w"
-  img3 << relative_path_to("/images/content/solidez-2000.jpg") + " 2000w"
+  img3 << relative_path_to("/images/content/senalizacion-vertical-750.jpg") + " 750w"
+  img3 << relative_path_to("/images/content/senalizacion-vertical-970.jpg") + " 970w"
+  img3 << relative_path_to("/images/content/senalizacion-vertical-1170.jpg") + " 1170w"
+  img3 << relative_path_to("/images/content/senalizacion-vertical-2000.jpg") + " 2000w"
 
   img4 = Array.new
-  img4 << relative_path_to("/images/content/senializacion-vertical-left-550.jpg") + " 550w"
-  img4 << relative_path_to("/images/content/senializacion-vertical-left-970.jpg") + " 970w"
-  img4 << relative_path_to("/images/content/senializacion-vertical-left-1170.jpg") + " 1170w"
-  img4 << relative_path_to("/images/content/senializacion-vertical-left-2000.jpg") + " 2000w"
+  img4 << relative_path_to("/images/products/senalizacion-vertical-1-500.jpg") + " 500w"
+  img4 << relative_path_to("/images/products/senalizacion-vertical-1-970.jpg") + " 970w"
+  img4 << relative_path_to("/images/products/senalizacion-vertical-1-2000.jpg") + " 2000w"
 
   img5 = Array.new
-  img5 << relative_path_to("/images/content/senializacion-vertical-middle-550.jpg") + " 550w"
-  img5 << relative_path_to("/images/content/senializacion-vertical-middle-970.jpg") + " 970w"
-  img5 << relative_path_to("/images/content/senializacion-vertical-middle-1170.jpg") + " 1170w"
-  img5 << relative_path_to("/images/content/senializacion-vertical-middle-2000.jpg") + " 2000w"
+  img5 << relative_path_to("/images/products/senalizacion-vertical-2-500.jpg") + " 500w"
+  img5 << relative_path_to("/images/products/senalizacion-vertical-2-970.jpg") + " 970w"
+  img5 << relative_path_to("/images/products/senalizacion-vertical-2-2000.jpg") + " 2000w"
 
   img6 = Array.new
-  img6 << relative_path_to("/images/content/senializacion-vertical-right-550.jpg") + " 550w"
-  img6 << relative_path_to("/images/content/senializacion-vertical-right-970.jpg") + " 970w"
-  img6 << relative_path_to("/images/content/senializacion-vertical-right-1170.jpg") + " 1170w"
-  img6 << relative_path_to("/images/content/senializacion-vertical-right-2000.jpg") + " 2000w"
+  img6 << relative_path_to("/images/products/senalizacion-vertical-3-500.jpg") + " 500w"
+  img6 << relative_path_to("/images/products/senalizacion-vertical-3-970.jpg") + " 970w"
+  img6 << relative_path_to("/images/products/senalizacion-vertical-3-2000.jpg") + " 2000w"
 
 
 %article.block.products-services
@@ -30,7 +27,7 @@
       Señalizacion
     vertical
   .products-services-bg
-    %img.lzl.block-img-bg{:srcset=>img3.join(",")}
+    %img.lzl.block-img-bg{:"data-original"=>img3[0].partition(" ").first ,:"data-original-set"=>img3.join(","), :src=>"data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEHAAEALAAAAAABAAEAAAICTAEAOw=="}
   .grid-noBottom.main-wrapper
     .col-6_sm-12
       .block-content.block-marging-top
@@ -46,10 +43,10 @@
   .grid-noBottom.products-services-images.main-wrapper
     .col-4
       .aspect-1-1
-        %img.lzl{:srcset=>img4.join(",")}
+        %img.lzl{:"data-original"=>img4[0].partition(" ").first ,:"data-original-set"=>img4.join(","), :src=>"data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEHAAEALAAAAAABAAEAAAICTAEAOw=="}
     .col-4
       .aspect-1-1
-        %img.lzl{:srcset=>img5.join(",")}
+        %img.lzl{:"data-original"=>img5[0].partition(" ").first ,:"data-original-set"=>img5.join(","), :src=>"data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEHAAEALAAAAAABAAEAAAICTAEAOw=="}
     .col-4
       .aspect-1-1
-        %img.lzl{:srcset=>img6.join(",")}
+        %img.lzl{:"data-original"=>img6[0].partition(" ").first ,:"data-original-set"=>img6.join(","), :src=>"data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEHAAEALAAAAAABAAEAAAICTAEAOw=="}
