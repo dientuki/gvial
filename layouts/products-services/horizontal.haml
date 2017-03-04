@@ -1,18 +1,35 @@
 ﻿:ruby
   img1 = Array.new
-  img1 << relative_path_to("/images/content/pintura-convencional-2000.jpg") + " 750w"
-  img1 << relative_path_to("/images/content/pintura-convencional-970.jpg") + " 970w"
-  img1 << relative_path_to("/images/content/pintura-convencional-1170.jpg") + " 1170w"
-  img1 << relative_path_to("/images/content/pintura-convencional-2000.jpg") + " 2000w"
+  img1 << relative_path_to("/images/products/pintura-convencional-2000.jpg") + " 750w"
+  img1 << relative_path_to("/images/products/pintura-convencional-970.jpg") + " 970w"
+  img1 << relative_path_to("/images/products/pintura-convencional-1170.jpg") + " 1170w"
+  img1 << relative_path_to("/images/products/pintura-convencional-2000.jpg") + " 2000w"
 
   img2 = Array.new
-  img2 << relative_path_to("/images/content/pintura-alto-desempenio-2000") + " 750w"
-  img2 << relative_path_to("/images/content/pintura-alto-desempenio-970.jpg") + " 970w"
-  img2 << relative_path_to("/images/content/pintura-alto-desempenio-1170.jpg") + " 1170w"
-  img2 << relative_path_to("/images/content/pintura-alto-desempenio-2000.jpg") + " 2000w"
+  img2 << relative_path_to("/images/products/pintura-alto-desempeno-2000") + " 750w"
+  img2 << relative_path_to("/images/products/pintura-alto-desempeno-970.jpg") + " 970w"
+  img2 << relative_path_to("/images/products/pintura-alto-desempeno-1170.jpg") + " 1170w"
+  img2 << relative_path_to("/images/products/pintura-alto-desempeno-2000.jpg") + " 2000w"
 
   img4 = Array.new
-  img4 << relative_path_to("/images/content/pintura-convencional-vertical-2000.jpg") + " 2000w"
+  img4 << relative_path_to("/images/products/pintura-convencional-vertical-1-2000.jpg") + " 970w"
+  img4 << relative_path_to("/images/products/pintura-convencional-vertical-1-1170.jpg") + " 1170w"
+  img4 << relative_path_to("/images/products/pintura-convencional-vertical-1-2000.jpg") + " 2000w"
+
+  img5 = Array.new
+  img5 << relative_path_to("/images/products/pintura-convencional-vertical-2-2000.jpg") + " 970w"
+  img5 << relative_path_to("/images/products/pintura-convencional-vertical-2-1170.jpg") + " 1170w"
+  img5 << relative_path_to("/images/products/pintura-convencional-vertical-2-2000.jpg") + " 2000w"
+
+  img6 = Array.new
+  img6 << relative_path_to("/images/products/pintura-alto-desempeno-vertical-1-2000.jpg") + " 970w"
+  img6 << relative_path_to("/images/products/pintura-alto-desempeno-vertical-1-1170.jpg") + " 1170w"
+  img6 << relative_path_to("/images/products/pintura-alto-desempeno-vertical-1-2000.jpg") + " 2000w"
+
+  img7 = Array.new
+  img7 << relative_path_to("/images/products/pintura-alto-desempeno-vertical-2-2000.jpg") + " 970w"
+  img7 << relative_path_to("/images/products/pintura-alto-desempeno-vertical-2-1170.jpg") + " 1170w"
+  img7 << relative_path_to("/images/products/pintura-alto-desempeno-vertical-2-2000.jpg") + " 2000w"
 
 %article.block.products-services.main-wrapper
   %h1.block-title
@@ -31,7 +48,7 @@
 
       .grid.fix-margin-top
         .col-8_md-9
-          .block-content
+          .block-products
             %h3.block-subtitle Vialine
             %p Pintura Acrílica modificada BASE SOLVENTE para ciudad, carreteras, vías interurbanas y municipales.  Presenta espesor seco máximo de 11 MILS. Pintura Acrílica modificada BASE SOLVENTE para ciudad, carreteras, vías interurbanas y municipales.  Presenta espesor seco máximo de 11 MILS.
             %h3.block-subtitle Aqualine
@@ -44,7 +61,7 @@
           .aspect-1-2
             %img.lzl{:"data-original"=>img4[0].partition(" ").first ,:"data-original-set"=>img4.join(","), :src=>"data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEHAAEALAAAAAABAAEAAAICTAEAOw=="}
           .aspect-1-2
-            %img.lzl.hide-me{:"data-original"=>img4[0].partition(" ").first ,:"data-original-set"=>img4.join(","), :src=>"data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEHAAEALAAAAAABAAEAAAICTAEAOw=="}
+            %img.lzl.hide-me{:"data-original"=>img5[0].partition(" ").first ,:"data-original-set"=>img5.join(","), :src=>"data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEHAAEALAAAAAABAAEAAAICTAEAOw=="}
 
     .col-6_sm-12
       %figure.products-services
@@ -56,7 +73,7 @@
 
       .grid.fix-margin-top
         .col-8_md-9
-          .block-content
+          .block-products
             %h2.block-bigsubtitle Termoplástico
             %h3.block-subtitle Extruline
             %p Pintura de larga duración, TERMOPLASTICO de aplicación en caliente por extrusión. Recomendado para vías con alta densidad de tráfico donde se requiera alta resistencia al desgaste.  Presenta espesor seco máximo de 90 MILS.
@@ -74,6 +91,6 @@
             %p Pintura de alta durabilidad de dos componentes de aplicación Manual para la elaboración de pasos peatonales, símbolos y flechas. Catalizada por peróxido orgánico.  Presenta espesor seco máximo de 60 MILS.
         .col-4_md-3
           .aspect-1-2
-            %img.lzl{:"data-original"=>img4[0].partition(" ").first ,:"data-original-set"=>img4.join(","), :src=>"data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEHAAEALAAAAAABAAEAAAICTAEAOw=="}
+            %img.lzl{:"data-original"=>img6[0].partition(" ").first ,:"data-original-set"=>img6.join(","), :src=>"data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEHAAEALAAAAAABAAEAAAICTAEAOw=="}
           .aspect-1-2
-            %img.lzl.hide-me{:"data-original"=>img4[0].partition(" ").first ,:"data-original-set"=>img4.join(","), :src=>"data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEHAAEALAAAAAABAAEAAAICTAEAOw=="}
+            %img.lzl.hide-me{:"data-original"=>img7[0].partition(" ").first ,:"data-original-set"=>img7.join(","), :src=>"data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEHAAEALAAAAAABAAEAAAICTAEAOw=="}

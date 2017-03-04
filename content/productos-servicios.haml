@@ -7,17 +7,47 @@ keywords: "señalizacion vial,señales de transito,Tachas reflectivas, Estoperol
 
 :ruby
 
+  img1 = Array.new
+  img1 << relative_path_to("/images/products/tachas-550.jpg") + " 550w"
+  img1 << relative_path_to("/images/products/tachas-970.jpg") + " 970w"
+  img1 << relative_path_to("/images/products/tachas-1170.jpg") + " 1170w"
+  img1 << relative_path_to("/images/products/tachas-2000.jpg") + " 2000w"
+
+  img2 = Array.new
+  img2 << relative_path_to("/images/products/tachones-550.jpg") + " 550w"
+  img2 << relative_path_to("/images/products/tachones-970.jpg") + " 970w"
+  img2 << relative_path_to("/images/products/tachones-1170.jpg") + " 1170w"
+  img2 << relative_path_to("/images/products/tachones-2000.jpg") + " 2000w"
+
+  img3 = Array.new
+  img3 << relative_path_to("/images/products/hitos-550.jpg") + " 550w"
+  img3 << relative_path_to("/images/products/hitos-970.jpg") + " 970w"
+  img3 << relative_path_to("/images/products/hitos-1170.jpg") + " 1170w"
+  img3 << relative_path_to("/images/products/hitos-2000.jpg") + " 2000w"
+
   img4 = Array.new
-  img4 << relative_path_to("/images/content/tachas-550.jpg") + " 550w"
-  img4 << relative_path_to("/images/content/tachas-970.jpg") + " 970w"
-  img4 << relative_path_to("/images/content/tachas-1170.jpg") + " 1170w"
-  img4 << relative_path_to("/images/content/tachas-2000.jpg") + " 2000w"
+  img4 << relative_path_to("/images/products/boyas-550.jpg") + " 550w"
+  img4 << relative_path_to("/images/products/boyas-970.jpg") + " 970w"
+  img4 << relative_path_to("/images/products/boyas-1170.jpg") + " 1170w"
+  img4 << relative_path_to("/images/products/boyas-2000.jpg") + " 2000w"
+
+  img5 = Array.new
+  img5 << relative_path_to("/images/products/resaltos-550.jpg") + " 550w"
+  img5 << relative_path_to("/images/products/resaltos-970.jpg") + " 970w"
+  img5 << relative_path_to("/images/products/resaltos-1170.jpg") + " 1170w"
+  img5 << relative_path_to("/images/products/resaltos-2000.jpg") + " 2000w"
+
+  img6 = Array.new
+  img6 << relative_path_to("/images/products/estoperoles-550.jpg") + " 550w"
+  img6 << relative_path_to("/images/products/estoperoles-970.jpg") + " 970w"
+  img6 << relative_path_to("/images/products/estoperoles-1170.jpg") + " 1170w"
+  img6 << relative_path_to("/images/products/estoperoles-2000.jpg") + " 2000w"
 
 = render '/products-services/horizontal.haml'
 = render '/products-services/vertical.haml'
 = render '/products-services/defend.haml'
 
-%article.block.products-services.main-wrapper
+%section.block.products-services.main-wrapper
   %h1.block-title.main-wrapper
     %strong
       Dispositivos de canalización &
@@ -27,7 +57,7 @@ keywords: "señalizacion vial,señales de transito,Tachas reflectivas, Estoperol
     %article.grid.col-6_sm-12
       .col-6
         .aspect-1-1
-          %img.lzl{:srcset=>img4.join(",")}
+          %img.lzl{:"data-original"=>img1[0].partition(" ").first ,:"data-original-set"=>img1.join(","), :src=>"data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEHAAEALAAAAAABAAEAAAICTAEAOw=="}
       .col-6
         %h1.block-subtitle Tachas
         %p Pintura formulada con resinas acrílicas BASE AGUA, excelente blancura y secado rápido.  Para vías de alto flujo vehicular.  Presenta espesor seco máximo de 14 MILS. Para vías de alto flujo vehicular.  Presenta espesor seco máximo de 14 MILS. Presenta espesor seco.
@@ -35,7 +65,7 @@ keywords: "señalizacion vial,señales de transito,Tachas reflectivas, Estoperol
     %article.grid.col-6_sm-12
       .col-6
         .aspect-1-1
-          %img.lzl{:srcset=>img4.join(",")}
+          %img.lzl{:"data-original"=>img2[0].partition(" ").first ,:"data-original-set"=>img2.join(","), :src=>"data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEHAAEALAAAAAABAAEAAAICTAEAOw=="}
       .col-6
         %h1.block-subtitle Tachones
         %p Pintura formulada con resinas acrílicas BASE AGUA, excelente blancura y secado rápido.  Para vías de alto flujo vehicular.  Presenta espesor seco máximo de 14 MILS. Para vías de alto flujo vehicular.  Presenta espesor seco máximo de 14 MILS. Presenta espesor seco.
@@ -43,7 +73,7 @@ keywords: "señalizacion vial,señales de transito,Tachas reflectivas, Estoperol
     %article.grid.col-6_sm-12
       .col-6
         .aspect-1-1
-          %img.lzl{:srcset=>img4.join(",")}
+          %img.lzl{:"data-original"=>img3[0].partition(" ").first ,:"data-original-set"=>img3.join(","), :src=>"data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEHAAEALAAAAAABAAEAAAICTAEAOw=="}
       .col-6
         %h1.block-subtitle Hitos
         %p Pintura formulada con resinas acrílicas BASE AGUA, excelente blancura y secado rápido.  Para vías de alto flujo vehicular.  Presenta espesor seco máximo de 14 MILS. Para vías de alto flujo vehicular.  Presenta espesor seco máximo de 14 MILS. Presenta espesor seco.
@@ -51,7 +81,7 @@ keywords: "señalizacion vial,señales de transito,Tachas reflectivas, Estoperol
     %article.grid.col-6_sm-12
       .col-6
         .aspect-1-1
-          %img.lzl{:srcset=>img4.join(",")}
+          %img.lzl{:"data-original"=>img4[0].partition(" ").first ,:"data-original-set"=>img4.join(","), :src=>"data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEHAAEALAAAAAABAAEAAAICTAEAOw=="}
       .col-6
         %h1.block-subtitle Boyas
         %p Pintura formulada con resinas acrílicas BASE AGUA, excelente blancura y secado rápido.  Para vías de alto flujo vehicular.  Presenta espesor seco máximo de 14 MILS. Para vías de alto flujo vehicular.  Presenta espesor seco máximo de 14 MILS. Presenta espesor seco.
@@ -59,7 +89,7 @@ keywords: "señalizacion vial,señales de transito,Tachas reflectivas, Estoperol
     %article.grid.col-6_sm-12
       .col-6
         .aspect-1-1
-          %img.lzl{:srcset=>img4.join(",")}
+          %img.lzl{:"data-original"=>img5[0].partition(" ").first ,:"data-original-set"=>img5.join(","), :src=>"data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEHAAEALAAAAAABAAEAAAICTAEAOw=="}
       .col-6
         %h1.block-subtitle Resaltos
         %p Pintura formulada con resinas acrílicas BASE AGUA, excelente blancura y secado rápido.  Para vías de alto flujo vehicular.  Presenta espesor seco máximo de 14 MILS. Para vías de alto flujo vehicular.  Presenta espesor seco máximo de 14 MILS. Presenta espesor seco.
@@ -67,7 +97,7 @@ keywords: "señalizacion vial,señales de transito,Tachas reflectivas, Estoperol
     %article.grid.col-6_sm-12
       .col-6
         .aspect-1-1
-          %img.lzl{:srcset=>img4.join(",")}
+          %img.lzl{:"data-original"=>img6[0].partition(" ").first ,:"data-original-set"=>img6.join(","), :src=>"data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEHAAEALAAAAAABAAEAAAICTAEAOw=="}
       .col-6
         %h1.block-subtitle Estoperoles
         %p Pintura formulada con resinas acrílicas BASE AGUA, excelente blancura y secado rápido.  Para vías de alto flujo vehicular.  Presenta espesor seco máximo de 14 MILS. Para vías de alto flujo vehicular.  Presenta espesor seco máximo de 14 MILS. Presenta espesor seco.
