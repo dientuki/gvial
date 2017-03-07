@@ -1,0 +1,16 @@
+:ruby
+  img2 = Array.new
+  img2 << relative_path_to("/images/experiencia/our-proyects-1-2000.jpg") + " 601w"
+  img2 << relative_path_to("/images/experiencia/our-proyects-1-970.jpg") + " 970w"
+  img2 << relative_path_to("/images/experiencia/our-proyects-1-1170.jpg") + " 1170w"
+  img2 << relative_path_to("/images/experiencia/our-proyects-1-2000.jpg") + " 2000w"
+
+%article.xp-article.xp-text.grid-reverse
+  .col-4
+    .xp-article-header
+      %h1.block-subtitle INSTITUTO NACIONAL DE VÍAS
+      %p Contrato 1209 de 2014
+      %p Obras de señalización vertical y horizontal y suministro e instalación de defensas metálicas en carreteras a cargo del a territorial del cauca
+  .col-8
+    .aspect-775-527
+      %img.lzl{:"data-original"=>img2[0].partition(" ").first ,:"data-original-set"=>img2.join(","), :src=>"data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEHAAEALAAAAAABAAEAAAICTAEAOw=="}

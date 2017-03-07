@@ -1,0 +1,16 @@
+:ruby
+  img2 = Array.new
+  img2 << relative_path_to("/images/experiencia/movilidad-2015-2000.jpg") + " 601w"
+  img2 << relative_path_to("/images/experiencia/movilidad-2015-970.jpg") + " 970w"
+  img2 << relative_path_to("/images/experiencia/movilidad-2015-1170.jpg") + " 1170w"
+  img2 << relative_path_to("/images/experiencia/movilidad-2015-2000.jpg") + " 2000w"
+
+%article.xp-article.xp-text.grid-reverse
+  .col-4
+    .xp-article-header
+      %h1.block-subtitle SECRETARÍA DISTRITAL DE MOVILIDAD
+      %p Contrato SDM 1206 de 2015
+      %p Realizar de forma integral el desarrollo de todas las actividades inherentes al proceso de señalización en Bogotá en la zona centro de la ciudad
+  .col-8
+    .aspect-775-527
+      %img.lzl{:"data-original"=>img2[0].partition(" ").first ,:"data-original-set"=>img2.join(","), :src=>"data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEHAAEALAAAAAABAAEAAAICTAEAOw=="}

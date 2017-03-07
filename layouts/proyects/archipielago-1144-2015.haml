@@ -1,0 +1,22 @@
+:ruby
+  img2 = Array.new
+  img2 << relative_path_to("/images/experiencia/our-proyects-1-2000.jpg") + " 601w"
+  img2 << relative_path_to("/images/experiencia/our-proyects-1-970.jpg") + " 970w"
+  img2 << relative_path_to("/images/experiencia/our-proyects-1-1170.jpg") + " 1170w"
+  img2 << relative_path_to("/images/experiencia/our-proyects-1-2000.jpg") + " 2000w"
+
+%article.xp-article.xp-images.grid
+  .col-4
+    .aspect-1-1
+      %img.lzl{:"data-original"=>img2[0].partition(" ").first ,:"data-original-set"=>img2.join(","), :src=>"data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEHAAEALAAAAAABAAEAAAICTAEAOw=="}
+  .col-4
+    .aspect-1-1
+      %img.lzl{:"data-original"=>img2[0].partition(" ").first ,:"data-original-set"=>img2.join(","), :src=>"data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEHAAEALAAAAAABAAEAAAICTAEAOw=="}
+  .col-4
+    .aspect-1-1
+      %img.lzl{:"data-original"=>img2[0].partition(" ").first ,:"data-original-set"=>img2.join(","), :src=>"data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEHAAEALAAAAAABAAEAAAICTAEAOw=="}
+  .col-12
+    .xp-article-header
+      %h1.block-subtitle DEPARTAMENTO ARCHIPIÉLAGO DE SAN ANDRÉS, PROVIDENCIA Y SANTA CATALINA
+      %p Contrato 1144 de 2015
+      %p Las obras de señalización vial vertical y señalización vial horizontal  de las calles de la isla de San Andrés (1' etapa), de acuerdo con lo dispuesto en el manual de señalización vial adoptado por el ministerio  de transporte mediante la resolución 1885 de 17 de junio de 2015 y los requerimientos de la secretaria de movilidad.

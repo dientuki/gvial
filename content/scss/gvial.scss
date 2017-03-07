@@ -134,6 +134,7 @@ body {
     text-transform: uppercase;
     font-size: #{$tfs/$fs}em;
     line-height: 1em;
+    margin-top: (24rem/$fs);
 
 
     small {
@@ -175,7 +176,8 @@ body {
   }
 }
 
-.block-no-top{
+.block-no-top,
+.block .block-no-top{
   margin-top: 0;
 }
 

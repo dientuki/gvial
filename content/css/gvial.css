@@ -1472,7 +1472,8 @@ body {
   .block .block-bigsubtitle {
     text-transform: uppercase;
     font-size: 2em;
-    line-height: 1em; }
+    line-height: 1em;
+    margin-top: 1.5rem; }
     .block .block-bigsubtitle small {
       font-style: 1em;
       text-transform: none; }
@@ -1496,7 +1497,8 @@ body {
     height: 100%;
     transform: translateX(-50%); }
 
-.block-no-top {
+.block-no-top,
+.block .block-no-top {
   margin-top: 0; }
 
 .menu-container {
