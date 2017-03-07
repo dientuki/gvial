@@ -65,8 +65,22 @@
     display: table;
 
     &:first-child {
-      margin-left: (200em/$fs);
+      margin-left: (136em/$fs);
+    }
+
+  }
+
+  .menu-item-home {
+    position: relative;
+    width: 57px;
+    border: none;
+    padding-right: 7px;
+
+    .menu-link {
+      font-size: 0;
+      width: 100%;
       position: relative;
+
 
       &:before {
         content: '';
@@ -74,10 +88,13 @@
         height: 51px;
         background: url(../images/logo-white.png);
         position: absolute;
-        left: -65px;
+        top:0;
+      }
+
+      &:hover {
+        background: transparent;
       }
     }
-
   }
 
   .menu-link {

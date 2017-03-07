@@ -13,7 +13,7 @@
         .close-icon
           %span
           %span
-    %a.logo{:href=>relative_path_to('/'), :title=>"Home"} Home
+    %a.logo{:href=>relative_path_to('/'), :title=>"Inicio"} Inicio
 
     .contact-info
       .contact-info-title
@@ -28,6 +28,8 @@
   %nav#primary-navigation
     %h6.visuallyhidden Navegación
     %ul.main-wrapper.menu-container
+      %li.menu-item.menu-item-home
+        %a.menu-link{:href=>relative_path_to('/'), :title=>"Inicio"} Inicio
       - menus.each do |menu|
         %li.menu-item
           %a.menu-link{:class=>('selected' if (@item[:selected] == menu[:href])  ), :href=>relative_path_to("/#{menu[:href]}.html"), :title=>menu[:title]}= menu[:text]

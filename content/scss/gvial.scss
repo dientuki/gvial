@@ -122,10 +122,14 @@ body {
     }
   }
 
+  .block-dropline,
   .block-subtitle {
     font-family: 'Roboto Bold';
     font-weight: bold;
     color:black;
+  }
+
+  .block-subtitle {
     text-transform: uppercase;
   }
 
@@ -179,6 +183,10 @@ body {
 .block-no-top,
 .block .block-no-top{
   margin-top: 0;
+}
+
+.product-horizontal .block-no-top{
+  margin-top: 0 !important;
 }
 
 .menu-container {

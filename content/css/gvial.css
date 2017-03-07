@@ -40,7 +40,8 @@ section {
  * Correct the font size and margin on `h1` elements within `section` and
  * `article` contexts in Chrome, Firefox, and Safari.
  */
-h1 {
+h1,
+h2 {
   font-size: 1em;
   margin: 0; }
 
@@ -1464,10 +1465,12 @@ body {
     .block .block-title strong, .block .block-title.strong {
       font-family: 'Roboto Bold';
       font-weight: bold; }
+  .block .block-dropline,
   .block .block-subtitle {
     font-family: 'Roboto Bold';
     font-weight: bold;
-    color: black;
+    color: black; }
+  .block .block-subtitle {
     text-transform: uppercase; }
   .block .block-bigsubtitle {
     text-transform: uppercase;
@@ -1500,6 +1503,9 @@ body {
 .block-no-top,
 .block .block-no-top {
   margin-top: 0; }
+
+.product-horizontal .block-no-top {
+  margin-top: 0 !important; }
 
 .menu-container {
   position: relative;
@@ -1562,15 +1568,25 @@ body {
     float: left;
     display: table; }
     #primary-navigation .menu-item:first-child {
-      margin-left: 12.5em;
+      margin-left: 8.5em; }
+  #primary-navigation .menu-item-home {
+    position: relative;
+    width: 57px;
+    border: none;
+    padding-right: 7px; }
+    #primary-navigation .menu-item-home .menu-link {
+      font-size: 0;
+      width: 100%;
       position: relative; }
-      #primary-navigation .menu-item:first-child:before {
+      #primary-navigation .menu-item-home .menu-link:before {
         content: '';
         width: 57px;
         height: 51px;
         background: url(../images/logo-white.png);
         position: absolute;
-        left: -65px; }
+        top: 0; }
+      #primary-navigation .menu-item-home .menu-link:hover {
+        background: transparent; }
   #primary-navigation .menu-link {
     font-size: 1.12em;
     height: 100%;
@@ -1649,6 +1665,9 @@ body {
 .products-services .hide-me {
   margin-top: 1em; }
 
+.product-horizontal .block-subtitle {
+  margin-top: 1em; }
+
 .our-projects {
   height: 29.38em; }
   .our-projects .our-projects-title {
@@ -1693,7 +1712,7 @@ body {
     z-index: 8; }
 
 .capacity .capacity-deco {
-  height: 39.06em;
+  height: 29.38em;
   position: relative; }
 
 .capacity .capacity-bg-content,
@@ -1742,7 +1761,7 @@ body {
   padding: 2em 1em 0;
   box-sizing: border-box; }
 
-.xp .xp-text .block-subtitle {
+.xp .xp-text .block-dropline {
   margin-bottom: 1em; }
 
 .xp .xp-images .xp-article-header {
@@ -1750,7 +1769,8 @@ body {
   padding: 1em;
   color: white; }
 
-.xp .xp-images .block-subtitle {
+.xp .xp-images .block-subtitle,
+.xp .xp-images .block-dropline {
   color: white; }
 
 .xp .xp-images .col-4 {

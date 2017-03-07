@@ -12,7 +12,7 @@
       box-sizing: border-box;
     }
 
-    .block-subtitle {
+    .block-dropline {
       margin-bottom: (16em/$fs);
     }
   }
@@ -24,7 +24,8 @@
       color:white;
     }
 
-    .block-subtitle {
+    .block-subtitle,
+    .block-dropline{
       color:white;
     }
 
