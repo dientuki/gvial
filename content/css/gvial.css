@@ -1453,6 +1453,15 @@ body {
 .aspect-1-2 {
   padding-bottom: 200%; }
 
+.aspectratio-hell .aspect-379x543 {
+  padding-bottom: 143.27%; }
+
+.aspectratio-hell .aspect-775x230 {
+  padding-bottom: 29.68%; }
+
+.aspectratio-hell .aspect-379x215 {
+  padding-bottom: 56.73%; }
+
 .block {
   margin-top: 2.5em;
   position: relative; }
@@ -1648,6 +1657,9 @@ body {
   .products-services figcaption strong {
     display: block;
     font-family: "Roboto Bold"; }
+
+.products-services .product-title-horizontal {
+  line-height: inherit; }
 
 .products-services .p-s-horizontal figcaption strong {
   display: inline; }
@@ -1991,7 +2003,9 @@ body {
       width: auto;
       height: 100%;
       position: absolute;
-      left: -6.25em; } }
+      left: -6.25em; }
+  .aspectratio-hell .aspect-379x543 {
+    padding-bottom: 148.88%; } }
 
 @media screen and (max-width: 60.62em) {
   .block [class$="-12"] {
@@ -2008,7 +2022,13 @@ body {
     padding: 1.56em 1.25em; }
   .products-services .hide-me {
     display: none;
-    visibility: hidden; } }
+    visibility: hidden; }
+  .aspectratio-hell .aspect-379x543 {
+    padding-bottom: 29.68%; }
+  .products-services .product-title-vertical {
+    line-height: inherit; }
+    .products-services .product-title-vertical strong {
+      display: inline; } }
 
 @media screen and (max-width: 46.87em) {
   .capacity .capacity-list .capacity-list-item {

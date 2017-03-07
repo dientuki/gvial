@@ -60,4 +60,11 @@
       left: (-100em/$fs);
     }
   }
+
+  .aspectratio-hell {
+    .aspect-379x543 {
+      //313x466
+      padding-bottom: (466%/313*100);
+    }
+  }
 }

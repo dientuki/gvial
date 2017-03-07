@@ -942,14 +942,14 @@ class Gmap {
   init() {
 
     window.initMap = () =>{
-      let uluru = {lat: -25.363, lng: 131.044};
+      let col = {lat: 4.746502, lng: -74.041654};
       let map = new google.maps.Map(this.el, {
-        zoom: 4,
-        center: uluru,
+        zoom: 18,
+        center: col,
         scrollwheel: false
       });
       let marker = new google.maps.Marker({
-        position: uluru,
+        position: col,
         map: map
       });
     }

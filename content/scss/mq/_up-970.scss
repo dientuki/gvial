@@ -41,4 +41,23 @@
       visibility: hidden;
     }
   }
+
+  .aspectratio-hell {
+    .aspect-379x543 {
+      padding-bottom: (230%/775*100);
+    }
+  }
+
+
+  .products-services {
+    .product-title-vertical {
+      line-height: inherit;
+
+      strong {
+        display: inline;
+      }
+    }
+
+  }
+
 }

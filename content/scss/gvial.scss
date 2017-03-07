@@ -104,6 +104,20 @@ body {
   padding-bottom: (2%/1*100);
 }
 
+.aspectratio-hell {
+  .aspect-379x543 {
+    padding-bottom: (543%/379*100);
+  }
+
+  .aspect-775x230 {
+    padding-bottom: (230%/775*100);
+  }
+
+  .aspect-379x215 {
+    padding-bottom: (215%/379*100);
+  }
+}
+
 .block {
   margin-top: (40em/$fs);
   position: relative;

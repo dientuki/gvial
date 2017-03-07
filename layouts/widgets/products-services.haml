@@ -12,32 +12,36 @@
   img4 << relative_path_to("/images/content/plastic-devices-2000.jpg") + " 2000w"
 
 
-%section.block.products-services.main-wrapper
+%section.block.products-services.main-wrapper.aspectratio-hell
   %h1.visuallyhidden Productos y servicios
   .grid-noBottom
     .col-4_sm-12
       %figure.products-services
-        %img.lzl.products-services-img{:srcset=>img1.join(",")}
-        %figcaption
+        .aspect-379x543
+          %img.lzl.products-services-img{:srcset=>img1.join(",")}
+        %figcaption.product-title-vertical
           %strong Señalizacion
           vertical
     .col-8_sm-12
       .grid
         .col-12.p-s-horizontal
           %figure.products-services
-            %img.lzl.products-services-img{:srcset=>img2.join(",")}
-            %figcaption
+            .aspect-775x230
+              %img.lzl.products-services-img{:srcset=>img2.join(",")}
+            %figcaption.product-title-horizontal
               %strong Señalizacion
               horizontal
-        .col-6_sm-12-noBottom
+        .col-6-noBottom
           %figure.products-services
-            %img.lzl.products-services-img{:srcset=>img3.join(",")}
+            .aspect-379x215
+              %img.lzl.products-services-img{:srcset=>img3.join(",")}
             %figcaption
               %strong Defensa
               metalica
-        .col-6_sm-12-noBottom
+        .col-6-noBottom
           %figure.products-services
-            %img.lzl.products-services-img{:srcset=>img4.join(",")}
+            .aspect-379x215
+              %img.lzl.products-services-img{:srcset=>img4.join(",")}
             %figcaption
               %strong Defensa
               metalica
