@@ -221,6 +221,28 @@ body {
   }
 }
 
+.has-full-link {
+  position: relative;
+  overflow: hidden;
+  z-index: 0;
+
+  .full-link {
+    color:white;
+    text-decoration: none;
+
+    &:before {
+      position: absolute;
+      left: 0;
+      top: 0;
+      background: transparent;
+      z-index: 999;
+      width: 300%;
+      height: 300%;
+      content:""
+    }
+  }
+}
+
 @import "widgets/_header";
 @import "widgets/_solidity";
 @import "widgets/_products-services";

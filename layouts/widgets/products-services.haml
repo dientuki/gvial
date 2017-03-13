@@ -1,47 +1,62 @@
 ﻿:ruby
-  img1 = Array.new
-  img1 << relative_path_to("/images/content/senal-vertical-2000.jpg") + " 2000w"
+  vertical = Array.new
+  vertical << relative_path_to("/images/home-products/senalizacion-vertical-950.jpg") + " 950w"
+  vertical << relative_path_to("/images/home-products/senalizacion-vertical-1170.jpg") + " 1170w"
+  vertical << relative_path_to("/images/home-products/senalizacion-vertical-2000.jpg") + " 2000w"
 
-  img2 = Array.new
-  img2 << relative_path_to("/images/content/senal-horizontal-2000.jpg") + " 2000w"
+  horizontal = Array.new
+  horizontal << relative_path_to("/images/home-products/senalizacion-horizontal-1170.jpg") + " 670w"
+  horizontal << relative_path_to("/images/home-products/senalizacion-horizontal-950.jpg") + " 950w"
+  horizontal << relative_path_to("/images/home-products/senalizacion-horizontal-1170.jpg") + " 1170w"
+  horizontal << relative_path_to("/images/home-products/senalizacion-horizontal-2000.jpg") + " 2000w"
 
-  img3 = Array.new
-  img3 << relative_path_to("/images/content/defensa-2000.jpg") + " 2000w"
+  box1 = Array.new
+  box1 << relative_path_to("/images/home-products/defensa-1170.jpg") + " 675w"
+  box1 << relative_path_to("/images/home-products/defensa-2000.jpg") + " 950w"
+  box1 << relative_path_to("/images/home-products/defensa-1170.jpg") + " 1170w"
+  box1 << relative_path_to("/images/home-products/defensa-2000.jpg") + " 2000w"
 
-  img4 = Array.new
-  img4 << relative_path_to("/images/content/plastic-devices-2000.jpg") + " 2000w"
-
+  box2 = Array.new
+  box2 << relative_path_to("/images/home-products/dispositivo-1170.jpg") + " 675w"
+  box2 << relative_path_to("/images/home-products/dispositivo-2000.jpg") + " 950w"
+  box2 << relative_path_to("/images/home-products/dispositivo-1170.jpg") + " 1170w"
+  box2 << relative_path_to("/images/home-products/dispositivo-2000.jpg") + " 2000w"
 
 %section.block.products-services.main-wrapper.aspectratio-hell
   %h1.visuallyhidden Productos y servicios
   .grid-noBottom
     .col-4_sm-12
-      %figure.products-services
+      %figure.products-services.has-full-link
         .aspect-379x543
-          %img.lzl.products-services-img{:srcset=>img1.join(",")}
+          %img.lzl.products-services-img{:"data-original"=>vertical[0].partition(" ").first ,:"data-original-set"=>vertical.join(","), :src=>"data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEHAAEALAAAAAABAAEAAAICTAEAOw=="}
         %figcaption.product-title-vertical
-          %strong Señalizacion
-          vertical
+          %a.full-link{:href=>relative_path_to("/productos-servicios.html") + "#senalizacion-vertical"}
+            %strong
+              Señalizacion
+            vertical
     .col-8_sm-12
       .grid
         .col-12.p-s-horizontal
-          %figure.products-services
+          %figure.products-services.has-full-link
             .aspect-775x230
-              %img.lzl.products-services-img{:srcset=>img2.join(",")}
+              %img.lzl.products-services-img{:"data-original"=>horizontal[0].partition(" ").first ,:"data-original-set"=>horizontal.join(","), :src=>"data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEHAAEALAAAAAABAAEAAAICTAEAOw=="}
             %figcaption.product-title-horizontal
-              %strong Señalizacion
-              horizontal
+              %a.full-link{:href=>relative_path_to("/productos-servicios.html") + "#senalizacion-horizontal"}
+                %strong Señalizacion
+                horizontal
         .col-6-noBottom
-          %figure.products-services
+          %figure.products-services.has-full-link
             .aspect-379x215
-              %img.lzl.products-services-img{:srcset=>img3.join(",")}
+              %img.lzl.products-services-img{:"data-original"=>box1[0].partition(" ").first ,:"data-original-set"=>box1.join(","), :src=>"data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEHAAEALAAAAAABAAEAAAICTAEAOw=="}
             %figcaption
-              %strong Defensa
-              metalica
+              %a.full-link{:href=>relative_path_to("/productos-servicios.html") + "#defensa-metalica"}
+                %strong Defensa
+                metalica
         .col-6-noBottom
-          %figure.products-services
+          %figure.products-services.has-full-link
             .aspect-379x215
-              %img.lzl.products-services-img{:srcset=>img4.join(",")}
+              %img.lzl.products-services-img{:"data-original"=>box2[0].partition(" ").first ,:"data-original-set"=>box2.join(","), :src=>"data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEHAAEALAAAAAABAAEAAAICTAEAOw=="}
             %figcaption
-              %strong Defensa
-              metalica
+              %a.full-link{:href=>relative_path_to("/productos-servicios.html") + "#dispositivos"}
+                %strong Defensa
+                metalica

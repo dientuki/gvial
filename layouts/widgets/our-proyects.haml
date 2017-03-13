@@ -6,9 +6,11 @@
   img << relative_path_to("/images/content/nuestros-proyectos-2000.jpg") + " 2000w"
 
 %section.our-projects.block
+
   %img.lzl.block-img-bg{:"data-original"=>img[0] ,:"data-original-set"=>img.join(","), :src=>"data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEHAAEALAAAAAABAAEAAAICTAEAOw=="}
   .main-wrapper
     %h1.block-title.our-projects-title
-      %strong
-        Nuestros
-      proyectos
+      %a.full-link
+        %strong
+          Nuestros
+        proyectos
