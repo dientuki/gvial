@@ -7,6 +7,9 @@ keywords: "señalizacion vial,señales de transito,Tachas reflectivas, Estoperol
 
 :ruby
   img1 = Array.new
+  img1 << relative_path_to("/images/content/nosotros-750.jpg") + " 750w"
+  img1 << relative_path_to("/images/content/nosotros-970.jpg") + " 970w"
+  img1 << relative_path_to("/images/content/nosotros-1170.jpg") + " 1170w"
   img1 << relative_path_to("/images/content/nosotros-2000.jpg") + " 2000w"
 
   img2 = Array.new
@@ -24,19 +27,16 @@ keywords: "señalizacion vial,señales de transito,Tachas reflectivas, Estoperol
       Nuestra
     historia
   .grid-noBottom
-    .grid.col-8_sm-12
-      .col-12
-        .aspect-20-9
-          %img.lzl{:"data-original"=>img1[0].partition(" ").first ,:"data-original-set"=>img1.join(","), :src=>"data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEHAAEALAAAAAABAAEAAAICTAEAOw=="}
-      .col-6_sm-12
+    .col-12
+      .aspect-1170-350
+        %img.lzl{:"data-original"=>img1[0].partition(" ").first ,:"data-original-set"=>img1.join(","), :src=>"data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEHAAEALAAAAAABAAEAAAICTAEAOw=="}
+    .grid.col-12
+      .col-4_sm-12
         %p Somos una empresa Colombiana,  especializada en Señalización y Seguridad Vial; contamos con un importante respaldo internacional y amplia trayectoria en el diseño, planeación,  ejecución y control de destacados proyectos tanto a nivel urbano como  rural a lo largo de todo el territorio nacional.  G-Vial,  entendemos claramente la enorme responsabilidad que representa la Señalización como factor determinante e imprescindible en la Seguridad  vial y  la protección de los actores de una vía;  es por ello que invertimos de forma constante el profesionalismo, la rigurosidad téni
+      .col-4_sm-12
         %p Somos una empresa Colombiana,  especializada en Señalización y Seguridad Vial; contamos con un importante respaldo internacional y amplia trayectoria en el diseño, planeación,  ejecución y control de destacados proyectos tanto a nivel urbano como  rural a lo largo de todo el territorio nacional.  G-Vial,  entendemos claramente la enorme responsabilidad que representa la Señalización como factor determinante e imprescindible en la Seguridad  vial y  la protección de los actores de una vía;  es por ello que invertimos de forma constante el profesionalismo, la rigurosidad téni
-      .col-6_sm-12
+      .col-4_sm-12
         %p Somos una empresa Colombiana,  especializada en Señalización y Seguridad Vial; contamos con un importante respaldo internacional y amplia trayectoria en el diseño, planeación,  ejecución y control de destacados proyectos tanto a nivel urbano como  rural a lo largo de todo el territorio nacional.  G-Vial,  entendemos claramente la enorme responsabilidad que representa la Señalización como factor determinante e imprescindible en la Seguridad  vial y  la protección de los actores de una vía;  es por ello que invertimos de forma constante el profesionalismo, la rigurosidad téni
-        %p Somos una empresa Colombiana,  especializada en Señalización y Seguridad Vial; contamos con un importante respaldo internacional y amplia trayectoria en el diseño, planeación,  ejecución y control de destacados proyectos tanto a nivel urbano como  rural a lo largo de todo el territorio nacional.  G-Vial,  entendemos claramente la enorme responsabilidad que representa la Señalización como factor determinante e imprescindible en la Seguridad  vial y  la protección de los actores de una vía;  es por ello que invertimos de forma constante el profesionalismo, la rigurosidad téni
-    .col-4_sm-12
-      %p Somos una empresa Colombiana,  especializada en Señalización y Seguridad Vial; contamos con un importante respaldo internacional y amplia trayectoria en el diseño, planeación,  ejecución y control de destacados proyectos tanto a nivel urbano como  rural a lo largo de todo el territorio nacional.  G-Vial,  entendemos claramente la enorme responsabilidad que representa la Señalización como factor determinante e imprescindible en la Seguridad  vial y  la protección de los actores de una vía;  es por ello que invertimos de forma constante el profesionalismo, la rigurosidad téni
-      %p Somos una empresa Colombiana,  especializada en Señalización y Seguridad Vial; contamos con un importante respaldo internacional y amplia trayectoria en el diseño, planeación,  ejecución y control de destacados proyectos tanto a nivel urbano como  rural a lo largo de todo el territorio nacional.  G-Vial,  entendemos claramente la enorme responsabilidad que representa la Señalización como factor determinante e imprescindible en la Seguridad  vial y  la protección de los actores de una vía;  es por ello que invertimos de forma constante el profesionalismo, la rigurosidad téni
 
 %article.block.main-wrapper
   %h1.block-title
