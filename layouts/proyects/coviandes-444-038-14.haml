@@ -1,16 +1,35 @@
 :ruby
+:ruby
   img2 = Array.new
-  img2 << relative_path_to("/images/experiencia/our-proyects-1-2000.jpg") + " 601w"
-  img2 << relative_path_to("/images/experiencia/our-proyects-1-970.jpg") + " 970w"
-  img2 << relative_path_to("/images/experiencia/our-proyects-1-1170.jpg") + " 1170w"
-  img2 << relative_path_to("/images/experiencia/our-proyects-1-2000.jpg") + " 2000w"
+  img2 << relative_path_to("/images/experiencia/coviandes-1-560.jpg") + " 560w"
+  img2 << relative_path_to("/images/experiencia/coviandes-1-970.jpg") + " 970w"
+  img2 << relative_path_to("/images/experiencia/coviandes-1-1170.jpg") + " 1170w"
+  img2 << relative_path_to("/images/experiencia/coviandes-1-2000.jpg") + " 2000w"
 
-%article.xp-article.xp-text.grid
+  img3 = Array.new
+  img3 << relative_path_to("/images/experiencia/coviandes-2-560.jpg") + " 560w"
+  img3 << relative_path_to("/images/experiencia/coviandes-2-970.jpg") + " 970w"
+  img3 << relative_path_to("/images/experiencia/coviandes-2-1170.jpg") + " 1170w"
+  img3 << relative_path_to("/images/experiencia/coviandes-2-2000.jpg") + " 2000w"
+
+  img4 = Array.new
+  img4 << relative_path_to("/images/experiencia/coviandes-3-560.jpg") + " 560w"
+  img4 << relative_path_to("/images/experiencia/coviandes-3-970.jpg") + " 970w"
+  img4 << relative_path_to("/images/experiencia/coviandes-3-1170.jpg") + " 1170w"
+  img4 << relative_path_to("/images/experiencia/coviandes-3-2000.jpg") + " 2000w"
+
+%article.xp-article.xp-images.grid
   .col-4
-    .xp-article-header
-      %h1.block-subtitle Fondo Nacional de Turismo - FONTUR
-      %h2.block-dropline Contrato 181 de 2014
-      %p Fabricar, suministrar e instalar la señalización turística en rutas secundarias y terciarias de Colombia en el departamento de Guanía en los tramos de vía y sitios turístico
-  .col-8
-    .aspect-775-527
+    .aspect-1-1
       %img.lzl{:"data-original"=>img2[0].partition(" ").first ,:"data-original-set"=>img2.join(","), :src=>"data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEHAAEALAAAAAABAAEAAAICTAEAOw=="}
+  .col-4
+    .aspect-1-1
+      %img.lzl{:"data-original"=>img3[0].partition(" ").first ,:"data-original-set"=>img3.join(","), :src=>"data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEHAAEALAAAAAABAAEAAAICTAEAOw=="}
+  .col-4
+    .aspect-1-1
+      %img.lzl{:"data-original"=>img4[0].partition(" ").first ,:"data-original-set"=>img4.join(","), :src=>"data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEHAAEALAAAAAABAAEAAAICTAEAOw=="}
+  .col-12
+    .xp-article-header
+      %h1.block-subtitle CONCESIONARIA VIAL DE LOS ANDES S.A.S.­ COVIANDES
+      %h2.block-dropline Contrato 444-038-14
+      %p Señalización horizontal en tramos 2, 3, 4, 5 y 6 y repintes para los casos en que se requiera, por afectaciones de las obras de la segunda calzada (tramo 5)
