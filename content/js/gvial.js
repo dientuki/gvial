@@ -63,7 +63,7 @@
 /******/ 	__webpack_require__.p = "";
 
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 32);
+/******/ 	return __webpack_require__(__webpack_require__.s = 33);
 /******/ })
 /************************************************************************/
 /******/ ([
@@ -380,7 +380,7 @@ module.exports = {
 /* WEBPACK VAR INJECTION */(function(process) {
 
 var utils = __webpack_require__(0);
-var normalizeHeaderName = __webpack_require__(29);
+var normalizeHeaderName = __webpack_require__(30);
 
 var PROTECTION_PREFIX = /^\)\]\}',?\n/;
 var DEFAULT_CONTENT_TYPE = {
@@ -481,12 +481,12 @@ module.exports = defaults;
 /* WEBPACK VAR INJECTION */(function(process) {
 
 var utils = __webpack_require__(0);
-var settle = __webpack_require__(21);
-var buildURL = __webpack_require__(24);
-var parseHeaders = __webpack_require__(30);
-var isURLSameOrigin = __webpack_require__(28);
+var settle = __webpack_require__(22);
+var buildURL = __webpack_require__(25);
+var parseHeaders = __webpack_require__(31);
+var isURLSameOrigin = __webpack_require__(29);
 var createError = __webpack_require__(5);
-var btoa = (typeof window !== 'undefined' && window.btoa && window.btoa.bind(window)) || __webpack_require__(23);
+var btoa = (typeof window !== 'undefined' && window.btoa && window.btoa.bind(window)) || __webpack_require__(24);
 
 module.exports = function xhrAdapter(config) {
   return new Promise(function dispatchXhrRequest(resolve, reject) {
@@ -582,7 +582,7 @@ module.exports = function xhrAdapter(config) {
     // This is only done if running in a standard browser environment.
     // Specifically not if we're in a web worker, or react-native.
     if (utils.isStandardBrowserEnv()) {
-      var cookies = __webpack_require__(26);
+      var cookies = __webpack_require__(27);
 
       // Add xsrf header
       var xsrfValue = (config.withCredentials || isURLSameOrigin(config.url)) && config.xsrfCookieName ?
@@ -703,7 +703,7 @@ module.exports = function isCancel(value) {
 "use strict";
 
 
-var enhanceError = __webpack_require__(20);
+var enhanceError = __webpack_require__(21);
 
 /**
  * Create an Error with the specified message, config, error code, and response.
@@ -1020,7 +1020,7 @@ class Navigation {
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_axios__ = __webpack_require__(14);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_axios__ = __webpack_require__(15);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_axios___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_axios__);
 
 
@@ -1184,10 +1184,253 @@ var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_
 /* 14 */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(15);
+var __WEBPACK_AMD_DEFINE_RESULT__;/**
+* Wallop.js
+*
+* @fileoverview Minimal JS library to show & hide things
+*
+* @author Pedro Duarte
+* @author http://pedroduarte.me/wallop
+*
+*/
+(function(global){
+  function Wallop(selector, options) {
+    if (!selector) { throw new Error('Missing selector. Refer to Usage documentation: https://github.com/peduarte/wallop#javascript'); }
+
+    for (var i = 0; i < selectorPool.length; i++) {
+      if (selectorPool[i] === selector) {
+        throw new Error('An instance of Wallop with this selector already exists.');
+      }
+    }
+
+    this.options = {
+      buttonPreviousClass: 'Wallop-buttonPrevious',
+      buttonNextClass: 'Wallop-buttonNext',
+      itemClass: 'Wallop-item',
+      currentItemClass: 'Wallop-item--current',
+      showPreviousClass: 'Wallop-item--showPrevious',
+      showNextClass: 'Wallop-item--showNext',
+      hidePreviousClass: 'Wallop-item--hidePrevious',
+      hideNextClass: 'Wallop-item--hideNext',
+      carousel: true
+    };
+
+    // Whitelist elements which contain `length`
+    this.whitelist = {
+      'form': true
+    };
+
+    if (selector.length > 0 && !this.whitelist[selector]) {
+      throw new Error('Selector cannot be an array, Refer to Usage documentation: https://github.com/peduarte/wallop#javascript');
+    } else {
+      this.$selector = selector;
+    }
+
+    this.options = extend(this.options, options);
+    this.event = null;
+
+    // "Global vars"
+    this.reset();
+    this.buttonPrevious = this.$selector.querySelector(' .' + this.options.buttonPreviousClass);
+    this.buttonNext = this.$selector.querySelector(' .' + this.options.buttonNextClass);
+
+    this.bindEvents();
+    this.createCustomEvent();
+
+    // If there is no active item, start at 0
+    if (this.currentItemIndex === -1) {
+      this.currentItemIndex = 0;
+      addClass(this.allItemsArray[this.currentItemIndex], this.options.currentItemClass);
+    }
+
+    // Update button states to make sure the correct state is set on initialization
+    this.updateButtonStates();
+
+    // Wrapped in timeout function so event can
+    // be listened from outside at anytime
+    var _this = this;
+    setTimeout(function() {
+      _this.event.detail.currentItemIndex = _this.currentItemIndex;
+      _this.$selector.dispatchEvent(_this.event);
+    }, 0);
+  }
+
+  var selectorPool = [];
+
+  var WS = Wallop.prototype;
+
+  // Update prev/next disabled attribute
+  WS.updateButtonStates = function () {
+    if ((!this.buttonPrevious && !this.buttonNext) || this.options.carousel) { return; }
+
+    if (this.currentItemIndex === this.lastItemIndex) {
+      this.buttonNext.setAttribute('disabled', 'disabled');
+    } else if (this.currentItemIndex === 0) {
+      this.buttonPrevious.setAttribute('disabled', 'disabled');
+    }
+  };
+
+  // Reset all settings by removing classes and attributes added by goTo() & updateButtonStates()
+  WS.removeAllHelperSettings = function () {
+    removeClass(this.allItemsArray[this.currentItemIndex], this.options.currentItemClass);
+    removeClass($$(this.options.hidePreviousClass, this.$selector), this.options.hidePreviousClass);
+    removeClass($$(this.options.hideNextClass, this.$selector), this.options.hideNextClass);
+    removeClass($$(this.options.showPreviousClass, this.$selector), this.options.showPreviousClass);
+    removeClass($$(this.options.showNextClass, this.$selector), this.options.showNextClass);
+
+    if (!this.buttonPrevious && !this.buttonNext) { return; }
+
+    this.buttonPrevious.removeAttribute('disabled');
+    this.buttonNext.removeAttribute('disabled');
+  };
+
+  // Method to add classes to the right elements depending on the index passed
+  WS.goTo = function (index) {
+    if (index === this.currentItemIndex) { return; }
+
+    // Fix the index if it's out of bounds and carousel is enabled
+    index = index === -1 && this.options.carousel ? this.lastItemIndex : index;
+    index = index === this.lastItemIndex + 1 && this.options.carousel ? 0 : index;
+
+    // Exit when index is out of bounds
+    if (index < 0 || index > this.lastItemIndex) { return; }
+
+    this.removeAllHelperSettings();
+
+    var isForwards = (index > this.currentItemIndex || index === 0 && this.currentItemIndex === this.lastItemIndex) && !(index === this.lastItemIndex && this.currentItemIndex === 0);
+    addClass(this.allItemsArray[this.currentItemIndex], isForwards ? this.options.hidePreviousClass : this.options.hideNextClass);
+    addClass(this.allItemsArray[index], this.options.currentItemClass + ' ' + (isForwards ? this.options.showNextClass : this.options.showPreviousClass));
+
+    this.currentItemIndex = index;
+
+    this.updateButtonStates();
+
+    this.event.detail.currentItemIndex = this.currentItemIndex;
+    this.$selector.dispatchEvent(this.event);
+  };
+
+  // Previous item handler
+  WS.previous = function () {
+    this.goTo(this.currentItemIndex - 1);
+  };
+
+  // Next item handler
+  WS.next = function () {
+    this.goTo(this.currentItemIndex + 1);
+  };
+
+  // Update global variables
+  WS.reset = function () {
+    this.allItemsArray = Array.prototype.slice.call(this.$selector.querySelectorAll(' .' + this.options.itemClass));
+    this.currentItemIndex = this.allItemsArray.indexOf(this.$selector.querySelector(' .' + this.options.currentItemClass));
+    this.lastItemIndex = this.allItemsArray.length - 1;
+  };
+
+  // Attach click handlers
+  WS.bindEvents = function () {
+    selectorPool.push(this.$selector);
+
+    var _this = this;
+
+    if (this.buttonPrevious) {
+      this.buttonPrevious.addEventListener('click', function (event) {
+        event.preventDefault();
+        _this.previous();
+      });
+    }
+
+    if (this.buttonNext) {
+      this.buttonNext.addEventListener('click', function (event) {
+        event.preventDefault();
+        _this.next();
+      });
+    }
+
+  };
+
+  // Method to bind custom event
+  WS.on = function (eventName, callback) {
+    this.$selector.addEventListener(eventName, callback, false);
+  };
+
+  // Method to unbind custom event
+  WS.off = function (eventName, callback) {
+    this.$selector.removeEventListener(eventName, callback, false);
+  };
+
+  // Create custom Event
+  WS.createCustomEvent = function () {
+    var _this = this;
+    this.event = new CustomEvent('change', {
+      detail: {
+        wallopEl: _this.$selector,
+        currentItemIndex: Number(_this.currentItemIndex)
+      },
+      bubbles: true,
+      cancelable: true
+    });
+  };
+
+  // Helper functions
+  function $$(element, container) {
+    if (!element) { return; }
+    if (!container) {
+      container = document;
+    }
+    return container.querySelector('.' + element);
+  }
+
+  function addClass(element, className) {
+    if (!element) { return; }
+    element.className = (element.className + ' ' + className).trim();
+  }
+
+  function removeClass(element, className) {
+    if (!element) { return; }
+    element.className = element.className.replace(className, '').trim();
+  }
+
+  function extend(origOptions, userOptions){
+    var extendOptions = {}, attrname;
+    for (attrname in origOptions) { extendOptions[attrname] = origOptions[attrname]; }
+    for (attrname in userOptions) { extendOptions[attrname] = userOptions[attrname]; }
+    return extendOptions;
+  }
+
+  // Pollyfill for CustomEvent() Constructor - thanks to Internet Explorer
+  // https://developer.mozilla.org/en-US/docs/Web/API/CustomEvent#Polyfill
+  function CustomEvent(event, params) {
+    params = params || { bubbles: false, cancelable: false, detail: undefined };
+    var evt = document.createEvent('CustomEvent');
+    evt.initCustomEvent(event, params.bubbles, params.cancelable, params.detail);
+    return evt;
+  }
+
+  CustomEvent.prototype = window.CustomEvent ? window.CustomEvent.prototype : {};
+  window.CustomEvent = CustomEvent;
+
+  // Exports to multiple environments
+  if(true){ //AMD
+    !(__WEBPACK_AMD_DEFINE_RESULT__ = function () { return Wallop; }.call(exports, __webpack_require__, exports, module),
+				__WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__));
+  } else if (typeof module !== 'undefined' && module.exports){ //node
+    module.exports = Wallop;
+  } else { // browser
+    // use string because of Google closure compiler ADVANCED_MODE
+    /* jslint sub:true */
+    global['Wallop'] = Wallop;
+  }
+}(this));
+
 
 /***/ }),
 /* 15 */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__(16);
+
+/***/ }),
+/* 16 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -1195,7 +1438,7 @@ module.exports = __webpack_require__(15);
 
 var utils = __webpack_require__(0);
 var bind = __webpack_require__(6);
-var Axios = __webpack_require__(17);
+var Axios = __webpack_require__(18);
 var defaults = __webpack_require__(1);
 
 /**
@@ -1230,14 +1473,14 @@ axios.create = function create(instanceConfig) {
 
 // Expose Cancel & CancelToken
 axios.Cancel = __webpack_require__(3);
-axios.CancelToken = __webpack_require__(16);
+axios.CancelToken = __webpack_require__(17);
 axios.isCancel = __webpack_require__(4);
 
 // Expose all/spread
 axios.all = function all(promises) {
   return Promise.all(promises);
 };
-axios.spread = __webpack_require__(31);
+axios.spread = __webpack_require__(32);
 
 module.exports = axios;
 
@@ -1246,7 +1489,7 @@ module.exports.default = axios;
 
 
 /***/ }),
-/* 16 */
+/* 17 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -1310,7 +1553,7 @@ module.exports = CancelToken;
 
 
 /***/ }),
-/* 17 */
+/* 18 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -1318,10 +1561,10 @@ module.exports = CancelToken;
 
 var defaults = __webpack_require__(1);
 var utils = __webpack_require__(0);
-var InterceptorManager = __webpack_require__(18);
-var dispatchRequest = __webpack_require__(19);
-var isAbsoluteURL = __webpack_require__(27);
-var combineURLs = __webpack_require__(25);
+var InterceptorManager = __webpack_require__(19);
+var dispatchRequest = __webpack_require__(20);
+var isAbsoluteURL = __webpack_require__(28);
+var combineURLs = __webpack_require__(26);
 
 /**
  * Create a new instance of Axios
@@ -1402,7 +1645,7 @@ module.exports = Axios;
 
 
 /***/ }),
-/* 18 */
+/* 19 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -1461,14 +1704,14 @@ module.exports = InterceptorManager;
 
 
 /***/ }),
-/* 19 */
+/* 20 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 
 var utils = __webpack_require__(0);
-var transformData = __webpack_require__(22);
+var transformData = __webpack_require__(23);
 var isCancel = __webpack_require__(4);
 var defaults = __webpack_require__(1);
 
@@ -1547,7 +1790,7 @@ module.exports = function dispatchRequest(config) {
 
 
 /***/ }),
-/* 20 */
+/* 21 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -1573,7 +1816,7 @@ module.exports = function enhanceError(error, config, code, response) {
 
 
 /***/ }),
-/* 21 */
+/* 22 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -1605,7 +1848,7 @@ module.exports = function settle(resolve, reject, response) {
 
 
 /***/ }),
-/* 22 */
+/* 23 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -1632,7 +1875,7 @@ module.exports = function transformData(data, headers, fns) {
 
 
 /***/ }),
-/* 23 */
+/* 24 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -1675,7 +1918,7 @@ module.exports = btoa;
 
 
 /***/ }),
-/* 24 */
+/* 25 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -1750,7 +1993,7 @@ module.exports = function buildURL(url, params, paramsSerializer) {
 
 
 /***/ }),
-/* 25 */
+/* 26 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -1769,7 +2012,7 @@ module.exports = function combineURLs(baseURL, relativeURL) {
 
 
 /***/ }),
-/* 26 */
+/* 27 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -1829,7 +2072,7 @@ module.exports = (
 
 
 /***/ }),
-/* 27 */
+/* 28 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -1850,7 +2093,7 @@ module.exports = function isAbsoluteURL(url) {
 
 
 /***/ }),
-/* 28 */
+/* 29 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -1925,7 +2168,7 @@ module.exports = (
 
 
 /***/ }),
-/* 29 */
+/* 30 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -1944,7 +2187,7 @@ module.exports = function normalizeHeaderName(headers, normalizedName) {
 
 
 /***/ }),
-/* 30 */
+/* 31 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -1988,7 +2231,7 @@ module.exports = function parseHeaders(headers) {
 
 
 /***/ }),
-/* 31 */
+/* 32 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -2022,7 +2265,7 @@ module.exports = function spread(callback) {
 
 
 /***/ }),
-/* 32 */
+/* 33 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -2034,6 +2277,9 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_vanilla_lazyload__ = __webpack_require__(13);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_vanilla_lazyload___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_4_vanilla_lazyload__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__modules_Navigation__ = __webpack_require__(9);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_wallop__ = __webpack_require__(14);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_wallop___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_6_wallop__);
+
 
 
 
@@ -2053,6 +2299,13 @@ let myLazyLoad = new __WEBPACK_IMPORTED_MODULE_4_vanilla_lazyload___default.a({
   data_src: "original",
   data_srcset: "original-set"
 });
+
+let slider = document.querySelector('.Wallop');
+
+if (slider.length !== null){
+  console.log('asdf')
+  new __WEBPACK_IMPORTED_MODULE_6_wallop___default.a(slider);
+}
 
 /***/ })
 /******/ ]);

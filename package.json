@@ -24,7 +24,8 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "vanilla-lazyload": "^4.0.3"
+    "vanilla-lazyload": "^4.0.3",
+    "wallop": "^2.4.1"
   },
   "devDependencies": {
     "autoprefixer": "^6.7.2",

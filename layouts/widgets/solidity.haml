@@ -5,12 +5,43 @@
   img << relative_path_to("/images/content/solidez-1170.jpg") + " 1170w"
   img << relative_path_to("/images/content/solidez-2000.jpg") + " 2000w"
 
+  img2 = Array.new
+  img2 << relative_path_to("/images/content/capacidad-operativa-750.jpg") + " 750w"
+  img2 << relative_path_to("/images/content/capacidad-operativa-970.jpg") + " 970w"
+  img2 << relative_path_to("/images/content/capacidad-operativa-1170.jpg") + " 1170w"
+  img2 << relative_path_to("/images/content/capacidad-operativa-2000.jpg") + " 2000w"
+
 
 %section.block.block-no-top.solidity
-  /
-    %img.lzl.block-img-bg{:"data-original"=>img[3] ,:"data-original-set"=>img.join(","), :src=>"data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEHAAEALAAAAAABAAEAAAICTAEAOw=="}
-  %img.lzl.block-img-bg{:"data-original"=>img[0].partition(" ").first ,:"data-original-set"=>img.join(","), :src=>"data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEHAAEALAAAAAABAAEAAAICTAEAOw=="}
-  .main-wrapper
-    .solidity-content
-      %h1.solidity-title Solidez
-      %p.solidity-p Garantiza la sostenibilidad económica y respalda la viabilidad de apalancamiento de diferentes.
+  .Wallop.Wallop--fade
+    .Wallop-list
+      .Wallop-item.Wallop-item--current
+        %img.lzl.block-img-bg{:"data-original"=>img[0].partition(" ").first ,:"data-original-set"=>img.join(","), :src=>"data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEHAAEALAAAAAABAAEAAAICTAEAOw=="}
+        .main-wrapper
+          .solidity-content
+            .solidity-title Solidez
+            %p.solidity-p Garantiza la sostenibilidad económica y respalda la viabilidad de apalancamiento de diferentes.
+
+      .Wallop-item
+        %img.lzl.block-img-bg{:"data-original"=>img2[0].partition(" ").first ,:"data-original-set"=>img2.join(","), :src=>"data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEHAAEALAAAAAABAAEAAAICTAEAOw=="}
+        .main-wrapper
+          .solidity-content
+            .solidity-title Titulo
+            %p.solidity-p Somos una empresa Colombiana, especializada en Señalización.
+
+      .Wallop-item
+        %img.lzl.block-img-bg{:"data-original"=>img[0].partition(" ").first ,:"data-original-set"=>img.join(","), :src=>"data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEHAAEALAAAAAABAAEAAAICTAEAOw=="}
+        .main-wrapper
+          .solidity-content
+            .solidity-title Factores
+            %p.solidity-p Garantiza la sostenibilidad económica y respalda la viabilidad de apalancamiento de diferentes.
+
+      .Wallop-item
+        %img.lzl.block-img-bg{:"data-original"=>img2[0].partition(" ").first ,:"data-original-set"=>img2.join(","), :src=>"data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEHAAEALAAAAAABAAEAAAICTAEAOw=="}
+        .main-wrapper
+          .solidity-content
+            .solidity-title Esperanza
+            %p.solidity-p Somos una empresa Colombiana, especializada en Señalización.
+
+    %button.Wallop-buttonPrevious Anterior
+    %button.Wallop-buttonNext Siguiente

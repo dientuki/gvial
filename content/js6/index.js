@@ -4,6 +4,7 @@ import reCaptcha from './modules/reCaptcha';
 import SendForm from './modules/SendForm';
 import LazyLoad from 'vanilla-lazyload';
 import Navigation from "./modules/Navigation";
+import Wallop from 'wallop';
 
 new Navigation();
 new SendForm('#contact-form');
@@ -17,3 +18,10 @@ let myLazyLoad = new LazyLoad({
   data_src: "original",
   data_srcset: "original-set"
 });
+
+let slider = document.querySelector('.Wallop');
+
+if (slider.length !== null){
+  console.log('asdf')
+  new Wallop(slider);
+}

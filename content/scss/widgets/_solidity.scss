@@ -1,8 +1,9 @@
 @import "../_vars";
 
 .solidity {
+  $h: (470em/$fs);
   position: relative;
-  height: (470em/$fs);
+  height: $h;
 
   .solidity-content {
     z-index: 1;
@@ -31,5 +32,9 @@
     $tfs:18;
     font-size: #{$tfs/$fs}em;
     padding-right: (80em/$tfs);
+  }
+
+  .Wallop-item {
+    height: $h;
   }
 }
