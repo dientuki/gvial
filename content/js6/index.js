@@ -22,6 +22,11 @@ let myLazyLoad = new LazyLoad({
 let slider = document.querySelector('.Wallop');
 
 if (slider.length !== null){
-  console.log('asdf')
-  new Wallop(slider);
+  let wap = new Wallop(slider);
+
+  setInterval(
+      function(){
+        wap.next();
+      },
+      3000)
 }

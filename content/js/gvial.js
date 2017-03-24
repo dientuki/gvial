@@ -2303,8 +2303,13 @@ let myLazyLoad = new __WEBPACK_IMPORTED_MODULE_4_vanilla_lazyload___default.a({
 let slider = document.querySelector('.Wallop');
 
 if (slider.length !== null){
-  console.log('asdf')
-  new __WEBPACK_IMPORTED_MODULE_6_wallop___default.a(slider);
+  let wap = new __WEBPACK_IMPORTED_MODULE_6_wallop___default.a(slider);
+
+  setInterval(
+      function(){
+        wap.next();
+      },
+      3000)
 }
 
 /***/ })

@@ -1,9 +1,8 @@
 @import "../_vars";
 
-.xp {
+.xp-article {
 
-  .xp-article-header {}
-
+  /*
   .xp-text {
     .xp-article-header {
       background: #d8d8d8;
@@ -17,10 +16,25 @@
     }
   }
 
-  .xp-images {
+
+  .col-4 {
+    padding-bottom: 0 !important;
+  }
+  */
+
+  .xp-article-header  {
+    padding: (16em/$fs);
+  }
+
+  &:nth-child(odd) {
+    .xp-article-header  {
+      background: #d8d8d8;
+    }
+  }
+
+  &:nth-child(even) {
     .xp-article-header  {
       background: $blueBG;
-      padding: (16em/$fs);
       color:white;
     }
 
@@ -28,9 +42,6 @@
     .block-dropline{
       color:white;
     }
-
-    .col-4 {
-      padding-bottom: 0 !important;
-    }
   }
+
 }

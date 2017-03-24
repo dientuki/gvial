@@ -1787,26 +1787,36 @@ body {
 .capacity .capacity-text {
   margin-top: 1em; }
 
-.xp .xp-text .xp-article-header {
-  background: #d8d8d8;
-  height: 100%;
-  padding: 2em 1em 0;
-  box-sizing: border-box; }
+.xp-article {
+  /*
+  .xp-text {
+    .xp-article-header {
+      background: #d8d8d8;
+      height: 100%;
+      padding: (32em/$fs) (16em/$fs) 0;
+      box-sizing: border-box;
+    }
 
-.xp .xp-text .block-dropline {
-  margin-bottom: 1em; }
+    .block-dropline {
+      margin-bottom: (16em/$fs);
+    }
+  }
 
-.xp .xp-images .xp-article-header {
-  background: #005796;
-  padding: 1em;
-  color: white; }
 
-.xp .xp-images .block-subtitle,
-.xp .xp-images .block-dropline {
-  color: white; }
-
-.xp .xp-images .col-4 {
-  padding-bottom: 0 !important; }
+  .col-4 {
+    padding-bottom: 0 !important;
+  }
+  */ }
+  .xp-article .xp-article-header {
+    padding: 1em; }
+  .xp-article:nth-child(odd) .xp-article-header {
+    background: #d8d8d8; }
+  .xp-article:nth-child(even) .xp-article-header {
+    background: #005796;
+    color: white; }
+  .xp-article:nth-child(even) .block-subtitle,
+  .xp-article:nth-child(even) .block-dropline {
+    color: white; }
 
 .our-company {
   background: #D9E3EA;
